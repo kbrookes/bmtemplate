@@ -1,0 +1,636 @@
+/////// BLOG PAGE
+
+#blogView {
+	/// Common
+	
+	/// Categories
+	.itemListCategoriesBlock {
+		margin-bottom: 50px;
+		h2 {
+			margin-bottom: 50px;
+			text-align: center;
+		}
+		.blogDescription {
+			text-align: center;
+		}
+	}
+	.blogSearch {
+		margin-bottom: 50px;
+		form {
+			height: 50px;
+		}
+	}
+	.blogItemContainer,
+	.blogItem {
+		margin-bottom: 30px;
+	}
+	.blogCatItemContent h3,
+	.blogCatItemContent h3 a {
+		color: @grey-mid;
+		.font-size(1.8);
+		line-height: 22px;
+		margin: 0 0 2px;
+		&:hover {
+			color: @grey-light;
+		}
+	}
+	.blogCatItemImage {
+		background-position: center center;
+		background-size: cover;
+		margin-bottom: 10px;
+		padding-bottom: 43%;
+		position: relative;
+		z-index: 100;
+		.blogItemReadMore {
+			top:37%;
+			opacity: 0;
+			position: absolute;
+			width: 100%;
+			transition: all 0.3s ease;
+			z-index: 101;
+			button {
+				cursor: hand;
+			}
+		}
+		&:hover .blogItemReadMore {
+			opacity: 1;
+			width: 100%;
+		}
+		
+	}
+	#itemListLeading {
+		.mix{
+	    	//display: none;
+    	}
+	    .col-xs-4,
+		.col-sm-4,
+		.col-md-4,
+		.col-lg-4 {
+			width: 33.3%;
+		}
+	}
+	/// Items
+	.socialToolbar {
+		line-height: 3.5rem;
+		margin-top: 30px;
+		margin-bottom: 30px;
+		.commentAnchor,
+		.share {
+			.font-size(1.2);
+		}
+		.sharingCode {
+			text-align: right;
+		}
+		.socialIcons {
+			.font-size(3.5);
+			margin-left: 10px;
+		}
+	}
+	.itemBody {
+		margin-bottom: 30px;
+		ul, ol {
+			font-weight: bold;
+			padding-left: 45px;
+			padding-right: 45px;
+			li {
+				font-weight: normal;
+				margin: 0 0 15px;
+			}
+		}
+	}
+	.item__comments__form {
+		background: @grey-light;
+		color: @grey-dark;
+		margin-bottom: 30px;
+		padding: 50px;
+		h3 {
+			color: @grey-mid;
+			.font-size(2.2);
+			margin: 0 0 10px;
+		}
+		.form-control {
+			margin-bottom: 15px;
+		}
+		.K2CommentsCaptcha {
+			color: @grey-mid;
+			.font-size(2);
+		}
+		#K2Recaptcha {
+			margin-bottom: 15px;
+		}
+	}
+}
+
+
+//////// RESOURCE PAGE
+
+#resourceView {
+	/// Common
+	
+	/// Category
+	.itemListCategoriesBlock {
+		margin-bottom: 50px;
+		h2 {
+			margin-bottom: 50px;
+			text-align: center;
+		}
+	}
+	.resourceButtons {
+		margin-bottom: 50px;
+	}
+	/// Cateogry Items
+	.resourceItem {
+		h3 {
+			color: @grey-mid;
+			.font-size(2);
+		}
+	}
+	.resourceCatItemImage {
+		background-position: center center;
+		background-size: cover;
+		padding-bottom: 141%;
+		position: relative;
+		z-index: 100;
+		.resourceItemReadMore {
+			top:37%;
+			opacity: 0;
+			position: absolute;
+			width: 100%;
+			transition: all 0.3s ease;
+			z-index: 101;
+			button {
+				cursor: hand;
+			}
+		}
+		&:hover .resourceItemReadMore {
+			opacity: 1;
+			width: 100%;
+		}
+		
+	}
+	/// Items
+	.resourceContent {
+		h2.itemTitle {
+			color: @grey-mid;
+			.font-size(3.5);
+			margin: 0 0 30px;
+		}
+	}
+}
+
+
+/////// CASE STUDIES PAGE
+
+.caseStudiesPage {
+	#page {
+		background-image: url(../images/content-background-slider.jpg);
+		background-size: 100%;
+		background-position: top center;
+		background-repeat: no-repeat;
+	}
+	#top {
+		background-color: @grey-dark;
+		color: @white;
+		margin-top: -10px;
+		padding: 80px 0 0;
+		.headline {
+			text-align: center;
+			padding: 0 0 80px;
+			h2 {
+				color: @white;
+				margin: 0 0 80px;
+			}
+		}
+	}
+	.resourceDescription {
+		padding: 60px 0;
+		text-align: center;
+	}
+	.testimonialItem {
+		padding-bottom: 30px;
+		.testimonialItemWrap {
+			background: @offwhite;
+			padding: 20px;
+			.quote {
+				color: @green;
+				display: inline-block;
+				.font-size(5);
+				text-align: center;
+				width: 100%;
+			}
+		}
+	}
+	.testimonialsGrid {
+		.testimonialItem {
+			@media @large-desktop {
+				width: 33.3%;
+			}
+			
+		}
+		/*.col-xs-4,
+		.col-sm-4,
+		.col-md-4,
+		.col-lg-4 {
+			width: 33.3%;
+		}*/
+	}
+}
+.parentid-483.view-item {
+	padding-top: 0;
+	header#header,
+	#bottom1,
+	#bottom2,
+	#footer {
+		display: none;
+	}
+	.returnToCaseStudies {
+		.font-size(4);
+		position: absolute;
+		top: 20px;
+		right: 30px;
+		z-index: 2000;
+	}
+	.closePage {
+		.font-size(3);
+	}
+	
+}
+
+#caseStudyView {
+	h2.itemTitle {
+		color: @grey-dark;
+		font-weight: 400;
+		margin: 30px 0;
+		text-align: center;
+	}
+	h3 {
+		color: @grey-dark;
+		font-weight: 400;
+	}
+	.itemNavigation {
+		padding: 40px 0;
+	}	
+	.servicesUsedBlock {
+		border-top: 1px solid @green;
+		border-bottom: 1px solid @green;
+		padding-top: 40px;
+		padding-bottom: 40px; 
+		.serviceCol {
+			h4 {
+				color: @green;
+			}
+		}
+	}
+	.socialToolbar {
+		padding-top: 20px;
+		.sharingCode {
+			line-height: 30px;
+			vertical-align: middle;
+		}
+		.share {
+			line-height: 30px;
+		}
+		.socialShare {
+			.font-size(3);
+		}
+	}
+}
+
+/*
+ * CSS Animations
+ * Don't forget to add vendor prefixes!
+ */
+.m-scene .scene_element {
+  animation-duration: 0.25s;
+  transition-timing-function: ease-in;
+  animation-fill-mode: both;
+}
+
+.m-scene .scene_element--fadein {
+  animation-name: fadeIn;
+}
+
+.m-scene.is-exiting .scene_element {
+  animation-direction: alternate-reverse;
+}
+
+/*
+ * Keyframes
+ */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+//////// EXPERTISE PAGE
+
+.expertisePage {
+	.expertiseHeader {
+		background-color: @grey-dark;
+		background-image: url(../images/content-background-expertise.jpg);
+		background-size: cover;
+		background-position: center center;
+		margin-top: -10px;
+		padding: 120px 0 20px;
+		text-align: center;
+		header {
+			padding: 0 130px;
+			.expertiseButtons {
+				h3 {
+					color: @white;
+				}
+			}
+		}
+		h2 {
+			color: @white;
+			margin: 40px 0;
+		}
+		p {
+			color: @white;
+			.font-size(1.8);
+			line-height: 1.6em;
+			margin: 0 0 40px;
+		}
+	}
+	.expertiseSubCategory {
+		padding-top: 80px;
+		padding-bottom: 30px;
+		position: relative;
+		.container {
+			padding-left: 80px;
+			padding-right: 80px;
+		}
+		.subCatIcon {
+			color: @green;
+			.font-size(7);
+			padding-bottom: 40px;
+			text-align: center;
+		}
+		h2 {
+			color: @grey-mid;
+			margin: 0 0 40px;
+			text-align: center;
+		}
+		.itemList {
+			padding: 30px 0px;
+			.panel {
+				background-color: transparent;
+				box-shadow: none;
+				margin-bottom: 12px;
+			}
+			.panel-default {
+				border: none;
+			}
+			.panel-heading {
+				background: transparent;
+				border: none;
+				border-bottom: 1px solid @grey-light;
+				border-radius: 0;
+				padding: 1px 0;
+				h4 {
+					color: @grey-mid;
+					& a {
+						color: @grey-mid;
+						&:hover {
+							color: @green;
+						}
+						&:visited {
+							color: @grey-mid;
+						}
+					}
+				}
+			}
+			.panel-body {
+				border: none;
+				padding: 15px 0;
+			}
+		}
+		.nextSection {
+			padding: 10px 0 0;
+		}
+	}
+	#subCatconsult,
+	#subCatexpress {
+		background: @offwhite;
+	}
+	.expertiseButtons {
+		text-align: center;
+		.matchWidth {
+			width: 100%;
+		}
+		h3 {
+			color: @grey-mid;
+			margin: 0;
+			text-transform: uppercase;
+		}
+		h4 {
+			color: @green;
+			.font-size(7);
+			margin: 20px 0;
+		}
+	}
+	.nextSection {
+		padding: 30px 0;
+	}
+}
+
+
+///////// CONTACT PAGE
+
+.contactPage {
+	#mainbody {
+		background-color: @grey-dark;
+		color: @white;
+		margin-top: -10px;
+		padding: 80px 0;
+		article {
+			p {color: @white;}
+			.itemHeader {
+				display: none;
+			}
+			.itemBody {
+				text-align: center;
+				h2 {
+					color: @white;
+					margin: 0 0 40px;
+				}
+				.helpText {
+					margin-right: 10px;
+				}
+			}
+		}
+		.bannerButtons {
+			padding-bottom: 0;
+		}
+		.scrollNext {
+			display: none;
+		}
+	}
+	.mapModule {
+		position: relative;
+	}
+	#contact-map {
+		width: 100%;
+		height: 500px;
+	}
+	.map-overlay {
+		background: fade(@white, 95%);
+		border: 1px solid @grey-mid;
+		display: inline-block;
+		left: 30px;
+		top: 30px;
+		padding: 30px;
+		position: absolute;
+	}
+	.contactPage-EmailForm {
+		.contactPage-EmailForm {
+			padding: 40px 0;
+		}
+		h2 {
+			color: @grey-mid;
+			margin: 0 0 40px 0;
+			text-align: center;
+		}
+		.form-group-contact {
+			label {
+				font-weight: normal;
+			}
+			input[type='checkbox'] {
+				margin: 0 6px 0 16px;
+			}
+		}
+	}
+}
+
+//// COMMON ACROSS MULTIPLE PAGES
+.itemHeader {
+	h2.itemTitle {
+		margin-bottom: 50px;
+		text-align: center;
+	}
+}
+
+.pageWithModules {
+	.itemView {
+		padding-bottom: 50px;
+		.bannerButtons {
+			padding-bottom: 30px;
+		}
+	}
+}
+
+.resourceFilter {
+	margin-bottom: 15px;
+	.btn-group {
+		margin-bottom: 15px;
+	}
+}
+
+
+///// SEARCH
+
+.searchView {
+	.k2SearchBlock {
+		margin: 40px auto;
+		width: 80%;
+		form input.searchInput {
+			height: 50px;
+		}
+	}
+	.itemlistItemView {
+		border-bottom: 1px solid @grey-light;
+		margin-bottom: 30px;
+		padding-bottom: 30px;
+	}
+	h2.itemTitle {
+		font-family: @header-normal;
+		.font-size(2.1);
+		line-height: 1em;
+		margin: 0 0 10px;
+		text-align: left;
+		& a {
+			color: @green;
+		}
+		&:hover a {
+			color: @grey-dark;
+		}
+	}
+	.itemDateCreated {
+		display: block;
+		.font-size(1.3);
+		text-transform: uppercase;
+	}
+	.itemFullText {
+		h2 {
+			.font-size(2.2);
+		}
+	}
+	.itemCategory {
+		color: @grey-mid;
+		.font-size(1.2);
+		font-weight: bold;
+		margin: 8px 0;
+		.btn {
+			width: 100%;
+		}
+	}
+	.pagination {
+		width: 100%;
+		ul {
+			border-bottom: none;
+			text-align: center;
+			li {
+				display: inline-block;
+				float: none;
+				padding: 0;
+				span,
+				a {
+					padding: 0 10px;
+				}
+				span {
+					color: @grey-light;
+				}
+				a {
+					color: @grey-mid;
+					&:hover {
+						color: @green;
+					}
+				}
+			}
+		}
+	}
+}
+
+//// Error Pages
+
+.errorPage {
+	h1 {
+		text-align: center;
+	}
+	h2 {
+		.font-size(2);
+	}
+	p {
+		color: @grey-dark;
+		line-height: 1.3em;
+		margin: 0 0 1.3em;
+		padding: 0;
+		a {
+			text-decoration: underline;
+		}
+	}
+	.k2SearchBlock form input.searchInput {
+		height: 50px;
+		width: 80%;
+	}
+	hr {
+		color: @green;
+	}
+	.signoff404 {
+		font-weight: 700;
+		span {
+			color: @green;
+		}
+	}
+}

@@ -1,0 +1,50 @@
+// Breakpoints
+// Original Basic Source: http://blog.scur.pl/2012/06/variable-media-queries-less-css/
+// Expanded by Jonathan Shroyer of DesignInnovations.net
+
+// Phone
+@phone: 	  ~"only screen and (max-width: 480px)";
+@super-small-phone: ~"only screen and (max-width: 240px)";
+@small-phone: ~"only screen and (max-width: 359px)";
+@phone-only: ~"only screen and (min-width: 360px) and (max-width: 480px)";
+
+/* Landscape phone to portrait tablet */
+@tablet-portrait:     		~"only screen and (min-width: 481px) and (max-width: 767px)";
+@tablet-portrait-and-smaller: ~"only screen and (max-width: 767px)";
+@tablet-portrait-and-bigger: ~"only screen and (min-width: 481px)";
+
+/* Small tablet - includes media query for tablet-portrait, but cuts out larger sizes */
+@small-tablet-portrait:     		~"only screen and (min-width: 481px) and (max-width: 599px)";
+@small-tablet-portrait-and-smaller: ~"only screen and (max-width: 599px)";
+@small-tablet-portrait-and-bigger: ~"only screen and (min-width: 481px)";
+
+/* Large tablet  - includes media query for tablet-portrait, but cuts out smaller sizes */
+
+@large-tablet-portrait: ~"only screen and (min-width: 600px) and (max-width: 767px)";
+@large-tablet-portrait-and-smaller:  ~"only screen and (max-width: 767px)";
+@large-tablet-portrait-and-bigger:  ~"only screen and (min-width: 600px)";
+
+/* Tablet landscape */
+@tablet-landscape: ~"only screen and (min-width: 768px) and (max-width: 991px)";
+@tablet-landscape-and-smaller: ~"only screen and (max-width: 991px)";
+@tablet-landscape-and-bigger: ~"only screen and (min-width: 768px)";
+
+// Desktop
+@desktop: ~"only screen and (min-width: 992px) and (max-width: 1199px)";
+@desktop-and-smaller: ~"only screen and (max-width: 1199px)";
+@desktop-and-bigger: ~"only screen and (min-width: 992px)";
+
+/* Large desktop */
+@large-desktop: ~"only screen and (min-width: 1200px)";
+
+//Non-retina
+@non-retina: ~"only screen and (-webkit-max-device-pixel-ratio: 1)";
+
+// Retina Only
+@retina: ~"only screen and (-webkit-min-device-pixel-ratio: 2)";
+
+// All high density media
+@highdensity: ~"only screen and (-webkit-min-device-pixel-ratio: 1.5)",
+              ~"only screen and (min--moz-device-pixel-ratio: 1.5)",
+              ~"only screen and (-o-min-device-pixel-ratio: 3/2)",
+              ~"only screen and (min-device-pixel-ratio: 1.5)";

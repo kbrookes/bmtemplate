@@ -1,0 +1,30 @@
+///// COLOURS
+
+@green: #80c721;
+@green-dark: #649f1a;
+@white: #fff;
+@offwhite: #f6f7f7;
+@grey-light: #eeeff0;
+@grey-mid: #798f99;
+@grey-dark: #526168;
+@grey-footer-text: #a9a9a9;
+
+
+///// FONTS
+
+@header: 'Cabin', sans-serif;
+@header-normal: 400;
+@header-medium: 600;
+
+.font-size(@sizeValue) {
+  @remValue: @sizeValue;
+  @pxValue: (@sizeValue * 10);
+  font-size: ~"@{pxValue}px"; 
+  font-size: ~"@{remValue}rem";
+}
+
+//// Styles
+
+.green-text {
+	color: @green;
+}

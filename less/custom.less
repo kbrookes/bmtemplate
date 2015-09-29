@@ -1,0 +1,288 @@
+///// COLOURS
+
+@green: #80c721;
+@green-dark: #649f1a;
+@white: #fff;
+@offwhite: #f6f7f7;
+@grey-light: #eeeff0;
+@grey-mid: #798f99;
+@grey-dark: #526168;
+@grey-footer-text: #a9a9a9;
+
+
+///// FONTS
+
+@header: 'Cabin', sans-serif;
+@header-normal: 400;
+@header-medium: 600;
+
+.font-size(@sizeValue) {
+  @remValue: @sizeValue;
+  @pxValue: (@sizeValue * 10);
+  font-size: ~"@{pxValue}px"; 
+  font-size: ~"@{remValue}rem";
+}
+
+.green-text {
+	color: @green;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: @grey-mid;
+	font-family: @header-normal;
+}
+
+p {
+	color: @grey-mid;
+}
+
+//// GENERAL
+
+body {
+	//background: @offwhite;
+	padding-top: 87px;
+	@media @desktop-and-smaller {
+		padding-top: 76px;
+	}
+	@media @tablet-landscape-and-smaller {
+		padding-top: 68px;
+	}
+	@media @tablet-portrait-and-smaller {
+		padding: 0;
+	}
+	&.modal-open {
+		padding-right:0px !important;
+		margin-right:0px !important;
+	}
+}
+
+
+a {
+	color: @grey-dark;
+	&:hover {
+		color: @green;
+		text-decoration: none;
+	}
+}
+
+a:hover, a:focus, a:active {
+	color: @green;
+	text-decoration: none;
+}
+
+ul {
+	padding-left: 20px;
+	margin: 0 0 20px;
+	li {
+		margin-bottom: 10px;
+	}
+}
+
+//// BUTTONS
+
+.btn {
+	border-radius: 2px;
+}
+
+.btn-white,
+.btn-light {
+	background: transparent;
+	border-color: @white;
+	color: @white;
+	font-family: @header;
+	font-weight: @header-normal;
+	transition: all 0.3s ease;
+	&:hover {
+		background: @white;
+		color: @grey-dark;
+		i.fa { 
+			color: @grey-dark;
+		}
+	}
+	i.fa {
+		color: @white;
+		transition: all 0.3s ease;
+	}
+}
+
+.btn-grey-white {
+	background: transparent;
+	border-color: @white;
+	color: @white;
+	font-family: @header;
+	font-weight: @header-normal;
+	transition: all 0.3s ease;
+	&:hover {
+		background: @green;
+		border-color: @white;
+		color: @white;
+		i.fa { 
+			color: @white;
+		}
+	}
+	i.fa {
+		color: @white;
+		transition: all 0.3s ease;
+	}
+}
+
+.btn-dark {
+	background: transparent;
+	border-color: @grey-dark;
+	color: @grey-dark;
+	font-family: @header;
+	font-weight: @header-normal;
+	transition: all 0.3s ease;
+	&:hover {
+		background: @grey-dark;
+		color: @white;
+		i.fa { 
+			color: @white;
+		}
+	}
+	i.fa {
+		color: @grey-dark;
+		transition: all 0.3s ease;
+	}
+}
+
+.btn-hover-green {
+	&:hover {
+		background: @green;
+		border: @white;
+		color: @white;
+		i.fa { 
+			color: @white;
+		}
+	}
+}
+
+.btn-green {
+	background: @green;
+	border-color: @white;
+	color: @white;
+	font-family: @header;
+	font-weight: @header-normal;
+	transition: all 0.3s ease;
+	&:hover {
+		background: @white;
+		color: @green;
+		i.fa { 
+			color: @green;
+		}
+	}
+	i.fa {
+		color: @white;
+		transition: all 0.3s ease;
+	}
+}
+
+.bannerButtons {
+	padding-top: 80px; 
+	.matchWidth {
+		margin: 0 9px;
+		width: 182px;
+		&:first-child {
+			margin-left: 0;
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+/// Justified button groups 
+
+.btn-group-justified > .btn,
+.btn-group-justified > .btn-group {
+	padding-left: 30px;
+	&:first-child {
+		padding-left: 0;
+	}
+}
+
+.btn-group-justified > .btn-group .btn {
+	height: 50px;
+}
+
+//// Forms
+
+.form-control {
+	height: 50px;
+}
+
+//// Overrides
+
+// No Gutters
+
+.container-fluid {
+	padding: 0;
+}
+
+.row.no-gutters {
+	margin-right: 0;
+	margin-left: 0;
+}
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+
+//// Full with containers on content items 
+
+.contentFullWidth {
+	#mainbody > .container {
+		width: 100%;
+		padding: 0;
+		#content-area {
+			padding: 0;
+		}
+	}
+}
+
+//// Blockquote override
+
+.testimonialItemWrap {
+	blockquote {
+		border: none;
+		margin: 0;
+		padding: 0;
+		p {
+			font-style: normal;
+		}
+	}
+}
+
+/// STUPID ANCHOR
+
+.stupidAnchor {
+	position: absolute;
+	top: -77px;
+	@media @desktop-and-smaller {
+		top: -66px;
+	}
+	@media @tablet-landscape-and-smaller {
+		top: -56px;
+	}
+	@media @large-tablet-portrait-and-smaller {
+		top: 2px;
+	}
+}
+
+//// ISOTOPE BOOTSTRAP FIXES
+
+/*.col-md-4 {
+    margin-right: -1px;
+}*/
+
+
+//// IMPORTS
+
+@import 'pages.less';
+@import 'modules.less';
+@import 'fontello.less';
+//@import 'bootstrap-anchor.min.css';
+@import 'animsition.min.less';
+@import 'breakpoints.less';
