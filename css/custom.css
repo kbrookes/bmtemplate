@@ -1592,6 +1592,9 @@ header .navbar-nav > li:hover > a:after {
 #teamBlock .teamPostItem {
   margin-bottom: 30px;
 }
+#teamBlock .teamPostButton {
+  cursor: pointer;
+}
 #teamBlock .teamMemberTitles {
   margin: 8px 0 0;
   position: relative;
