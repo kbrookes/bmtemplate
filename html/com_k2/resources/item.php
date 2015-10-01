@@ -9,7 +9,13 @@
 
 // no direct access
 defined('_JEXEC') or die;
-
+$doc = JFactory::getDocument();
+if($this->item->extraFields->titletag->value != ''):
+	$doc->setTitle($this->item->extraFields->titletag->value);
+endif; 
+if($this->item->extraFields->metadescription->value != ''):
+	$doc->setMetaData('description', $this->item->extraFields->metadescription->value);
+endif;
 ?>
 
 
