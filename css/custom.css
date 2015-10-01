@@ -390,12 +390,6 @@ ul li {
   font-size: 3.5rem;
   margin: 0 0 30px;
 }
-.caseStudiesPage #page {
-  background-image: url(../images/content-background-slider.jpg);
-  background-size: 100%;
-  background-position: top center;
-  background-repeat: no-repeat;
-}
 .caseStudiesPage #top {
   background-color: #526168;
   color: #ffffff;
@@ -441,6 +435,12 @@ ul li {
   .caseStudiesPage .testimonialsGrid .testimonialItem {
     width: 33.3%;
   }
+}
+.caseStudiesPage.view-item #page {
+  background-image: url(../images/content-background-slider.jpg);
+  background-size: 100%;
+  background-position: top center;
+  background-repeat: no-repeat;
 }
 .parentid-483.view-item {
   padding-top: 0;
