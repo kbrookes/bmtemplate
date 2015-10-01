@@ -17,11 +17,11 @@ K2HelperUtilities::setDefaultImage($this->item, 'itemlist', $this->params);
 
 <!-- Start K2 Item Layout -->
 <a title="<?php $this->item->title; ?>" class="caseStudyButton animsition-link">
-<div class="caseStudiesItem mix col-xs-12 col-sm-4">
+<div class="caseStudiesItem mix col-xs-12 col-sm-4" style="background-image: url(<?php echo $this->item->image->src; ?>);">
 	    <div class="caseStudyButton">
-	    <?php if($this->item->params->get('catItemImage') && $this->item->image): ?>
-	    	<img src="<?php echo $this->item->image->src; ?>" alt="<?php echo htmlspecialchars($this->item->image->alt); ?>" class="img-responsive"/>
-    	<?php endif; ?>
+	    <?php if($this->item->extraFields->casestudiesclientlogo->value != ''): 
+		    echo $this->item->extraFields->casestudiesclientlogo->value;
+	    endif; ?>
 	    </div>
 </div>
 </a>
