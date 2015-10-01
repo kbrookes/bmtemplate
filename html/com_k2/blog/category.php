@@ -185,30 +185,19 @@ defined('_JEXEC') or die;
 	<div class="itemList">
 
 		<?php if(isset($this->leading) && count($this->leading)): ?>
-		<!-- Leading items -->
 		<div id="itemListLeading"  class="row blogGrid">
-			<?php foreach($this->leading as $key=>$item): ?>
+			<?php // Fetching multiple items based on filters
+				// Get items from categories which have the IDs 33 and 40
+				$model = K2Model::getInstance('items');
+				// Apply publishing and ACL
+				$model->setState('site', true);
+				$model->setState('category', 5);
+				$model->setState('sorting', 'created.reverse');
+				$items = $model->getRows();
 
-			<?php
-			// Define a CSS class for the last container on each row
-			if( (($key+1)%($this->params->get('num_leading_columns'))==0) || count($this->leading)<$this->params->get('num_leading_columns') )
-				$lastContainer= ' itemContainerLast';
-			else
-				$lastContainer='';
-			?>
-			
-			
-				<?php
-					// Load category_item.php by default
-					$this->item=$item;
-					echo $this->loadTemplate('item');
-				?>
-			
-			<?php if(($key+1)%($this->params->get('num_leading_columns'))==0): ?>
-			
-			<?php endif; ?>
-			<?php endforeach; ?>
-			
+				foreach ( $items as $item ) {
+					$this->item = $item; echo $this->loadItemlistLayout();
+				} ?>
 		</div>
 		<?php endif; ?>
 
@@ -325,112 +314,114 @@ $tplUrl = JURI::root() . 'templates/' . JFactory::getApplication()->getTemplate(
 (function( $ ){
 	
 	
-	function getHashFilter() {
-		var hash = location.hash;
-		// get filter=filterName
-		var matches = location.hash.match( /filter=([^&]+)/i );
-		var hashFilter = matches && matches[1];
-		return hashFilter && decodeURIComponent( hashFilter );
-	}
-	
-	
-	$( function() {
-
-		var $container = $('.blogGrid');
-
-		// bind filter button click
-		var $filters = $('.filter-button-group').on( 'click', 'button', function() {
-			var filterAttr = $( this ).attr('data-filter');
-			// set filter in hash
-			location.hash = 'filter=' + encodeURIComponent( filterAttr );
-		});
-		
-		var isIsotopeInit = false;
-		
-		function onHashchange() {
-			var hashFilter = getHashFilter();
-			if ( !hashFilter && isIsotopeInit ) {
-				return;
-			}
-			isIsotopeInit = true;
-			// filter isotope
-			$container.isotope({
-				itemSelector: '.blogItem',
-				percentPosition: true,
-				layoutMode: 'fitRows',
-				animationEngine: 'best-available',
-				filter: hashFilter
-			});
-			// set selected class on button
-			if ( hashFilter ) {
-				$filters.find('.is-checked').removeClass('is-checked');
-				$filters.find('[data-filter="' + hashFilter + '"]').addClass('is-checked');
-			}
+		function getHashFilter() {
+			var hash = location.hash;
+			// get filter=filterName
+			var matches = location.hash.match( /filter=([^&]+)/i );
+			var hashFilter = matches && matches[1];
+			return hashFilter && decodeURIComponent( hashFilter );
 		}
 		
-		$(window).on( 'hashchange', onHashchange );
-		// trigger event handler to init Isotope
-		onHashchange();
-	});
+		
+		$( function() {
 	
+			var $container = $('.blogGrid');
 	
-	
-	
-	/*// init Isotope
-	var $grid = $('.blogGrid').isotope({
-		percentPosition: true,
-		itemSelector: '.blogItem',
-		layoutMode: 'fitRows',
-		resizesContainer: true
-	});
-	// filter items on button click
-	$('.filter-button-group').on( 'click', 'button', function() {
-		var filterValue = $(this).attr('data-filter');
-		$grid.isotope({ filter: filterValue });
-	});*/
-	
-	
-	
-	/*// infinitescroll() is called on the element that surrounds 
-	// the items you will be loading more of
-	  $('#itemListLeading').infinitescroll({
-	 
-	    navSelector  : ".k2Pagination",            
-	                   // selector for the paged navigation (it will be hidden)
-	    nextSelector : ".pagination-next a",    
-	                   // selector for the NEXT link (to page 2)
-	    itemSelector : ".blogItem",          
-	                   // selector for all items you'll retrieve
-       // call Isotope as a callback
-        function( newElements ) {
-          $container.isotope( 'appended', $( newElements ) );
-		   $container.isotope('layout');
-        }
-	  });*/
-	
-	
-	
-	
-	/*// JSCROLL
-	$('.blogListView').jscroll({
-	    debug: true,
-	    contentSelector: '.blogItem',
-	    nextSelector: '.pagination-next a',
-	    callback( newElements ){
-		    $grid.isotope( 'appended', $( newElements ) ); 
-	    }
-	});*/
-	
-	
-	///* MIX IT UP */
-	/* $(function(){
-	    $('#itemListLeading').mixItUp({
-		    load: {
-				filter: 'all'
+			// bind filter button click
+			var $filters = $('.filter-button-group').on( 'click', 'button', function() {
+				var filterAttr = $( this ).attr('data-filter');
+				// set filter in hash
+				location.hash = 'filter=' + encodeURIComponent( filterAttr );
+			});
+			
+			var isIsotopeInit = false;
+			
+			function onHashchange() {
+				var hashFilter = getHashFilter();
+				if ( !hashFilter && isIsotopeInit ) {
+					return;
+				}
+				isIsotopeInit = true;
+				// filter isotope
+				$container.isotope({
+					itemSelector: '.blogItem',
+					percentPosition: true,
+					layoutMode: 'fitRows',
+					animationEngine: 'best-available',
+					filter: hashFilter
+				});
+				// set selected class on button
+				if ( hashFilter ) {
+					$filters.find('.is-checked').removeClass('is-checked');
+					$filters.find('[data-filter="' + hashFilter + '"]').addClass('is-checked');
+				}
 			}
-	    });
-	});		*/
-	
+			
+			$(window).on( 'hashchange', onHashchange );
+			// trigger event handler to init Isotope
+			onHashchange();
+		});
+		
+		
+		
+		
+		/*// init Isotope
+		var $grid = $('.blogGrid').isotope({
+			percentPosition: true,
+			itemSelector: '.blogItem',
+			layoutMode: 'fitRows',
+			resizesContainer: true
+		});
+		// filter items on button click
+		$('.filter-button-group').on( 'click', 'button', function() {
+			var filterValue = $(this).attr('data-filter');
+			$grid.isotope({ filter: filterValue });
+		});*/
+		
+		
+		
+		/*// infinitescroll() is called on the element that surrounds 
+		// the items you will be loading more of
+		  $('#itemListLeading').infinitescroll({
+		 
+		    navSelector  : ".k2Pagination",            
+		                   // selector for the paged navigation (it will be hidden)
+		    nextSelector : ".pagination-next a",    
+		                   // selector for the NEXT link (to page 2)
+		    itemSelector : ".blogItem",          
+		                   // selector for all items you'll retrieve
+	       // call Isotope as a callback
+	        function( newElements ) {
+	          $container.isotope( 'appended', $( newElements ) );
+			   $container.isotope('layout');
+	        }
+		  });*/
+		
+		
+		
+		
+		/*// JSCROLL
+		$('.blogListView').jscroll({
+		    debug: true,
+		    contentSelector: '.blogItem',
+		    nextSelector: '.pagination-next a',
+		    callback( newElements ){
+			    $grid.isotope( 'appended', $( newElements ) ); 
+		    }
+		});*/
+		
+		
+		///* MIX IT UP */
+		/* $(function(){
+		    $('#itemListLeading').mixItUp({
+			    load: {
+					filter: 'all'
+				}
+		    });
+		});		*/
+	$(document).ready(function(){
+		$container.isotope();
+	});
 })( jQuery );
 </script>
 
