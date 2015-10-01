@@ -307,22 +307,90 @@ header {
 	}
 	.caseStudyContent {
 		background: @white;
-		.caseStudyImage {
-			position: relative;
-			.closeCaseStudy {
-				color: @white;
-				.font-size(7);
-				top: 20px;
-				right: 20px;
-				position: absolute;
-			}
-			img {
-				float: right;
-			}
+		background-position: right top;
+		background-size: 50%;
+		background-repeat: no-repeat;
+		position: relative;
+		@media @desktop-and-smaller {
+			background-position: right center;
+		}
+		h2 {
+			color: @grey-dark;
+			.font-size(2.8);
+		}
+		p {
+			color: @grey-dark;
+			.font-size(1.8);
+			text-shadow: 1px 1px 0 #fff;
+		}
+		.closeCaseStudy {
+			color: @grey-dark;
+			.font-size(4);
+			top: 20px;
+			right: 20px;
+			position: absolute;
+			cursor: pointer;
 		}
 		.caseStudyContentCol {
 			padding-top: 40px;
 		}
+		&.in {
+			
+			
+		}
+	}
+	.caseStudyItem {
+		background-size: cover;
+		background-position: center center;
+		.caseStudyButton {
+			.caseStudyButtonInner {
+				background:fade(#275700, 30%);;
+				transition: 0.3s ease background;
+				&:after {
+				    content:'';
+				    position: absolute;
+				    top: 100%;
+				    left: 0;
+				    right: 0;
+				    margin: 0 auto;
+				    width: 0;
+				    height: 0;
+				    border-top: solid 10px @green;
+				    border-left: solid 10px transparent;
+				    border-right: solid 10px transparent;
+				    opacity: 1;
+				    z-index: 2000;
+				    @media @desktop-and-smaller {
+						border-top: solid 8px @green;
+					    border-left: solid 8px transparent;
+					    border-right: solid 8px transparent;
+					}
+					@media @tablet-landscape-and-smaller {
+						border-top: solid 7px @green;
+					    border-left: solid 7px transparent;
+					    border-right: solid 7px transparent;
+				    }
+				}
+				img {
+					max-width: 100%;
+				}
+			}
+			&.collapsed {
+				.caseStudyButtonInner {
+					background: transparent;
+					&:after {
+						opacity: 0;
+						transition: 0.3s ease opacity;
+					}
+				}
+			}
+			&:hover {
+				.caseStudyButtonInner {
+					background: fade(#275700, 30%);
+				}
+			}
+		}
+		
 	}
 }
 
