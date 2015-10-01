@@ -434,6 +434,10 @@ ul li {
     width: 33.3%;
   }
 }
+.caseStudiesPage .caseStudiesItem {
+  background-size: cover;
+  background-position: center center;
+}
 .parentid-483.view-item {
   padding-top: 0;
 }
