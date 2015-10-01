@@ -160,6 +160,14 @@ ul li {
 .bannerButtons .matchWidth:last-child {
   margin-right: 0;
 }
+.bannerButtons.verticalButtons {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.bannerButtons.verticalButtons .matchWidth {
+  display: block;
+  margin: 0 0 8px;
+}
 .btn-group-justified > .btn,
 .btn-group-justified > .btn-group {
   padding-left: 30px;
@@ -433,10 +441,6 @@ ul li {
   .caseStudiesPage .testimonialsGrid .testimonialItem {
     width: 33.3%;
   }
-}
-.caseStudiesPage .caseStudiesItem {
-  background-size: cover;
-  background-position: center center;
 }
 .parentid-483.view-item {
   padding-top: 0;
@@ -1149,23 +1153,88 @@ header .navbar-nav > li:hover > a:after {
 }
 .featuredCaseStudies .caseStudyContent {
   background: #ffffff;
-}
-.featuredCaseStudies .caseStudyContent .caseStudyImage {
+  background-position: right top;
+  background-size: 50%;
+  background-repeat: no-repeat;
   position: relative;
 }
-.featuredCaseStudies .caseStudyContent .caseStudyImage .closeCaseStudy {
-  color: #ffffff;
-  font-size: 70px;
-  font-size: 7rem;
+@media only screen and (max-width: 1199px) {
+  .featuredCaseStudies .caseStudyContent {
+    background-position: right center;
+  }
+}
+.featuredCaseStudies .caseStudyContent h2 {
+  color: #526168;
+  font-size: 28px;
+  font-size: 2.8rem;
+}
+.featuredCaseStudies .caseStudyContent p {
+  color: #526168;
+  font-size: 18px;
+  font-size: 1.8rem;
+  text-shadow: 1px 1px 0 #fff;
+}
+.featuredCaseStudies .caseStudyContent .closeCaseStudy {
+  color: #526168;
+  font-size: 40px;
+  font-size: 4rem;
   top: 20px;
   right: 20px;
   position: absolute;
-}
-.featuredCaseStudies .caseStudyContent .caseStudyImage img {
-  float: right;
+  cursor: pointer;
 }
 .featuredCaseStudies .caseStudyContent .caseStudyContentCol {
   padding-top: 40px;
+}
+.featuredCaseStudies .caseStudyItem {
+  background-size: cover;
+  background-position: center center;
+}
+.featuredCaseStudies .caseStudyItem .caseStudyButton .caseStudyButtonInner {
+  background: rgba(39, 87, 0, 0.3);
+  transition: 0.3s ease background;
+}
+.featuredCaseStudies .caseStudyItem .caseStudyButton .caseStudyButtonInner:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 0;
+  height: 0;
+  border-top: solid 10px #80c721;
+  border-left: solid 10px transparent;
+  border-right: solid 10px transparent;
+  opacity: 1;
+  z-index: 2000;
+}
+@media only screen and (max-width: 1199px) {
+  .featuredCaseStudies .caseStudyItem .caseStudyButton .caseStudyButtonInner:after {
+    border-top: solid 8px #80c721;
+    border-left: solid 8px transparent;
+    border-right: solid 8px transparent;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .featuredCaseStudies .caseStudyItem .caseStudyButton .caseStudyButtonInner:after {
+    border-top: solid 7px #80c721;
+    border-left: solid 7px transparent;
+    border-right: solid 7px transparent;
+  }
+}
+.featuredCaseStudies .caseStudyItem .caseStudyButton .caseStudyButtonInner img {
+  max-width: 100%;
+}
+.featuredCaseStudies .caseStudyItem .caseStudyButton.collapsed .caseStudyButtonInner {
+  background: transparent;
+}
+.featuredCaseStudies .caseStudyItem .caseStudyButton.collapsed .caseStudyButtonInner:after {
+  opacity: 0;
+  transition: 0.3s ease opacity;
+}
+.featuredCaseStudies .caseStudyItem .caseStudyButton:hover .caseStudyButtonInner {
+  background: rgba(39, 87, 0, 0.3);
 }
 .frontpage #mainbody > .container {
   padding-bottom: 0;
