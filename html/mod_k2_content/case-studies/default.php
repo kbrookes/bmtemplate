@@ -25,16 +25,16 @@ if ($menu->getActive() == $menu->getDefault()) {
 <?php if(count($items)): ?>
 	<div class="row no-gutters">
     <?php foreach ($items as $key=>$item):	?>
-	    <div class="col-xs-12 col-sm-4 caseStudyItem">
+	    <div class="col-xs-12 col-sm-4 caseStudyItem" style="background-image: url(<?php echo $item->image->src; ?>);">
 		    <?php if(($isFrontPage) && ($ualayout != "mobile")):?>
-		    <a title="<?php echo JText::_('K2_CONTINUE_READING'); ?> &quot;<?php echo htmlspecialchars($item->title); ?>&quot;" type="button" data-toggle="collapse" data-target="#caseStudyContent-<?php echo $key;?>" aria-expanded="false" aria-controls="caseStudyContent" data-parent="#caseStudiesHome" class="caseStudyButton">
+		    <a title="<?php echo JText::_('K2_CONTINUE_READING'); ?> &quot;<?php echo htmlspecialchars($item->title); ?>&quot;" type="button" data-toggle="collapse" data-target="#caseStudyContent-<?php echo $key;?>" aria-expanded="false" aria-controls="caseStudyContent" data-parent="#caseStudiesHome" class="caseStudyButton collapsed button<?php echo $key; ?>">
 		    <?php else: ?>
 		    <a href="<?php echo $item->link; ?>">
 		    <?php endif; ?>
-			    <div class="caseStudyButton">
-			    <?php if($params->get('itemImage') && $item->image): ?>
-			    	<img src="<?php echo $item->image->src; ?>" alt="<?php echo htmlspecialchars($item->image->alt); ?>" class="img-responsive"/>
-		    	<?php endif; ?>
+			    <div class="caseStudyButtonInner">
+			    <?php if($item->extraFields->casestudiesclientlogo->value != ''): 
+				    echo $item->extraFields->casestudiesclientlogo->value;
+			    endif; ?>
 			    </div>
 		    </a>
 	    </div>
@@ -45,21 +45,15 @@ if ($menu->getActive() == $menu->getDefault()) {
 	<?php if(($ualayout == "desktop") || ($ualayout == "tablet")){?>
 		<?php if(count($items)): ?>
 		    <?php foreach ($items as $key=>$item):	?>
-		    <div class="caseStudyContent collapse" id="caseStudyContent-<?php echo $key;?>">
+		    <div class="caseStudyContent collapse" id="caseStudyContent-<?php echo $key;?>" <?php if(isset($item->extraFields->teaserheroimage->value)):?>style="background-image: url(<?php echo $item->extraFields->teaserheroimage->value; ?>)"<?php endif; ?>>
+			    <a class="closeCaseStudy"><i class="icon-close"></i></a>
 			    <div class="row">
-				    <div class="col-xs-12 col-sm-8 col-md-6 pull-right caseStudyImage">
-					    <?php if(isset($item->extraFields->secondaryimage->value)):
-						    echo $item->extraFields->secondaryimage->value;
-						    endif; ?>
-						<a class="closeCaseStudy"><i class="icon-close"></i></a>
-				    </div>
-				    <div class="col-xs-12 col-sm-4 col-md-4 col-md-offset-2 col-lg-4 col-lg-offset-2 push-left caseStudyContentCol">
-					    <h3><?php echo $item->title; ?></h3>
+				    <div class="col-xs-12 col-sm-6 col-sm-offset-1 col-md-6 col-md-offset-1 col-lg-5 col-lg-offset-1 caseStudyContentCol">
 					    <?php if($params->get('itemIntroText')): ?>
 							<?php echo $item->introtext; ?>
 						<?php endif; ?>
 						<?php if(($params->get('itemReadMore') && $item->fulltext) || ($params->get('itemCategory'))): ?>
-							<div class="bannerButtons text-center">
+							<div class="bannerButtons verticalButtons">
 								<?php if($params->get('itemReadMore') && $item->fulltext): ?>
 									<a href="<?php echo $item->link; ?>" class="btn btn-default btn-lg btn-dark matchWidth">Read more <i class="fa fa-angle-double-right"></i></a>
 								<?php endif; ?>
