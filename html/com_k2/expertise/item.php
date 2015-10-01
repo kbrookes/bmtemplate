@@ -12,6 +12,12 @@ defined('_JEXEC') or die ;
 
 // Dependencies
 $document = JFactory::getDocument();
+if($this->item->extraFields->titletag->value != ''):
+	$document->setTitle($this->item->extraFields->titletag->value);
+endif; 
+if($this->item->extraFields->metadescription->value != ''):
+	$document->setMetaData('description', $this->item->extraFields->metadescription->value);
+endif;
 $document->addScript('https://cdnjs.cloudflare.com/ajax/libs/picturefill/2.3.1/picturefill.js');
 ?>
 
