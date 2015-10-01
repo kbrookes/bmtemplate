@@ -29,7 +29,7 @@ if ($menu->getActive() == $menu->getDefault()) {
 		    <?php if(($isFrontPage) && ($ualayout != "mobile")):?>
 		    <a title="<?php echo JText::_('K2_CONTINUE_READING'); ?> &quot;<?php echo htmlspecialchars($item->title); ?>&quot;" type="button" data-toggle="collapse" data-target="#caseStudyContent-<?php echo $key;?>" aria-expanded="false" aria-controls="caseStudyContent" data-parent="#caseStudiesHome" class="caseStudyButton collapsed button<?php echo $key; ?>">
 		    <?php else: ?>
-		    <a href="<?php echo $item->link; ?>">
+		    <a href="<?php echo $item->link; ?>" class="caseStudyButton collapsed">
 		    <?php endif; ?>
 			    <div class="caseStudyButtonInner">
 			    <?php if($item->extraFields->casestudiesclientlogo->value != ''): 
