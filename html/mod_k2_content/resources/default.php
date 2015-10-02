@@ -37,7 +37,7 @@ defined('_JEXEC') or die ; ?>
 <?php endif; ?>
 <div class="row">
 	<div class="col-xs-12 text-center scrollBlock">
-		<a href="#testimonialBlock" class="scroll"><i class="fa fa-chevron-down"></i></a>
+		<a href="#testimonialBlock" class="scroll"><i class="icon-down-open-big"></i></a>
 	</div>
 </div>
 </div>
