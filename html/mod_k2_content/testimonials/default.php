@@ -38,11 +38,11 @@ defined('_JEXEC') or die ; ?>
 	</div>
 <?php endif; ?>
 	<a class="left carousel-control" href="#testimonialCarousel" role="button" data-slide="prev">
-		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		<span class="icon-left-open-big" aria-hidden="true"></span>
 		<span class="sr-only">Previous</span>
 	</a>
 	<a class="right carousel-control" href="#testimonialCarousel" role="button" data-slide="next">
-		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		<span class="icon-right-open-big" aria-hidden="true"></span>
 		<span class="sr-only">Next</span>
 	</a>
 	<?php if($params->get('itemCustomLink')): ?>
