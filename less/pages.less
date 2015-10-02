@@ -47,7 +47,17 @@
 		margin-bottom: 10px;
 		padding-bottom: 43%;
 		position: relative;
-		z-index: 100;
+		.blogItemImage {
+			filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+			-webkit-filter: grayscale(100%);
+			filter: grayscale(100%);
+			filter: gray;
+			top: 0;
+			left:0;
+			position: absolute;
+			width: 100%
+			transition: all 0.3s ease;
+		}
 		.blogItemReadMore {
 			top:37%;
 			opacity: 0;
@@ -59,11 +69,19 @@
 				cursor: hand;
 			}
 		}
-		&:hover .blogItemReadMore {
-			opacity: 1;
-			width: 100%;
+		&:hover {
+			.blogItemImage {
+				filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=0);
+				-webkit-filter: grayscale(0%);
+				filter: grayscale(0%);
+				filter: gray;
+				
+			}
+			.blogItemReadMore {
+				opacity: 1;
+				width: 100%;
+			}
 		}
-		
 	}
 	#itemListLeading {
 		.mix{
