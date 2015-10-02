@@ -31,6 +31,7 @@ endif;
 		<input class="sb-search-submit" type="submit" value="">
 		<span class="sb-icon-search"><i class="fa fa-search"></i></span>
 	</form>
+	<span class="sb-icon-close">X</span>
 </div>
 <?php else: ?>
 
