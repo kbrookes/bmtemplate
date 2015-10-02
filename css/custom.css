@@ -318,7 +318,17 @@ ul li {
   margin-bottom: 10px;
   padding-bottom: 43%;
   position: relative;
-  z-index: 100;
+}
+#blogView .blogCatItemImage .blogItemImage {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: gray;
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%
+			transition: all 0.3s ease;
 }
 #blogView .blogCatItemImage .blogItemReadMore {
   top: 37%;
@@ -330,6 +340,12 @@ ul li {
 }
 #blogView .blogCatItemImage .blogItemReadMore button {
   cursor: hand;
+}
+#blogView .blogCatItemImage:hover .blogItemImage {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=0);
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+  filter: gray;
 }
 #blogView .blogCatItemImage:hover .blogItemReadMore {
   opacity: 1;
@@ -1484,9 +1500,6 @@ header .navbar-nav > li:hover > a:after {
 #blogModule .blogPostItem {
   margin-bottom: 30px;
 }
-#blogModule .blogPostItem .blogPostButton {
-  margin-bottom: 10px;
-}
 #blogModule .blogPostItem h3 {
   color: #526269;
   font-size: 18px;
@@ -1507,6 +1520,48 @@ header .navbar-nav > li:hover > a:after {
 }
 #blogModule .blogModuleButtons {
   margin-bottom: 74px;
+}
+#blogModule .blogPostButton {
+  background-position: center center;
+  background-size: cover;
+  margin-bottom: 10px;
+  padding-bottom: 43%;
+  position: relative;
+  z-index: 100;
+}
+#blogModule .blogPostButton .blogItemImage {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: gray;
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%
+			transition: all 0.3s ease;
+}
+#blogModule .blogPostButton .blogItemReadMore {
+  top: 43%;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  transition: all 0.3s ease;
+  z-index: 101;
+}
+#blogModule .blogPostButton .blogItemReadMore button {
+  cursor: hand;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+#blogModule .blogPostButton:hover .blogItemImage {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=0);
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+  filter: gray;
+}
+#blogModule .blogPostButton:hover .blogItemReadMore {
+  opacity: 1;
+  width: 100%;
 }
 .k2SearchBlock form {
   border: 1px solid #526269;
@@ -1545,7 +1600,7 @@ header .navbar-nav > li:hover > a:after {
 }
 #navSearch .sb-search {
   position: relative;
-  margin-top: 17px;
+  margin-top: 24px;
   width: 0%;
   min-width: 28px;
   float: right;
