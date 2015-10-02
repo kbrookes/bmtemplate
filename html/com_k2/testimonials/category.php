@@ -57,6 +57,12 @@ defined('_JEXEC') or die;
 		</div>
 	</div>
 
+	<!-- Pagination -->
+	<?php if($this->pagination->getPagesLinks()): ?>
+	<div class="k2Pagination">
+		<?php if($this->params->get('catPagination')) echo $this->pagination->getPagesLinks(); ?>
+	</div>
+	<?php endif; ?>
 	
 	<?php endif; ?>
 </div>
@@ -70,6 +76,7 @@ $tplUrl = JURI::root() . 'templates/' . JFactory::getApplication()->getTemplate(
 
 <script src="<?php echo $tplUrl; ?>/js/isotope.pkgd.min.js" type="text/javascript"></script>
 <script src="<?php echo $tplUrl; ?>/js/isotope-layout.js" type="text/javascript"></script>
+<script src="<?php echo $tplUrl; ?>/js/jquery.infinitescroll.min.js" type="text/javascript"></script>
 <script>
 (function( $ ){
 	// init Isotope
@@ -78,5 +85,17 @@ $tplUrl = JURI::root() . 'templates/' . JFactory::getApplication()->getTemplate(
 		percentPosition: true,
 		layoutMode: 'masonry'
 	});
+	// infinitescroll() is called on the element that surrounds 
+	// the items you will be loading more of
+	  $('#itemListLeading').infinitescroll({
+	 
+	    navSelector  : "div.k2Pagination",            
+	                   // selector for the paged navigation (it will be hidden)
+	    nextSelector : ".pagination-next a",    
+	                   // selector for the NEXT link (to page 2)
+	    itemSelector : ".testimonialItem",
+	                   // selector for all items you'll retrieve
+		debug : true
+	  });
 })( jQuery );
 </script>
