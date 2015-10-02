@@ -276,6 +276,10 @@ ul li {
 /*.col-md-4 {
     margin-right: -1px;
 }*/
+.frontpage #mainbody {
+  background: #f6f7f7;
+  padding-bottom: 50px;
+}
 #blogView .itemListCategoriesBlock {
   margin-bottom: 50px;
 }
@@ -1113,9 +1117,12 @@ header .navbar-nav > li:hover > a:after {
     font-size: 2rem;
   }
 }
+.frontpage #topHeader {
+  background: #f6f7f7;
+}
 #topHeader {
-  margin-top: 50px;
-  margin-bottom: 40px;
+  padding-top: 50px;
+  padding-bottom: 40px;
 }
 #topHeader .stupidAnchor {
   top: -110px;
@@ -1431,7 +1438,7 @@ header .navbar-nav > li:hover > a:after {
   background-image: url(../images/modules/testimonial-bg.jpg);
   background-size: cover;
   background-position: center center;
-  margin: 50px 0px;
+  margin: 0px;
 }
 #testimonialCarousel .carousel-inner > .item {
   min-height: 600px;
@@ -1462,6 +1469,9 @@ header .navbar-nav > li:hover > a:after {
   position: absolute;
   width: 100%;
   z-index: 2000;
+}
+#blogModule {
+  padding-top: 50px;
 }
 #blogModule .module-title h2 {
   color: #526269;
@@ -2035,10 +2045,45 @@ div#bottom2 .module ul.menu > li a {
   margin: 0 0 80px;
   text-align: center;
 }
+.carousel-control .icon-right-open-big,
+.carousel-control .icon-next {
+  margin-right: -15px;
+}
+.carousel-control .icon-left-open-big,
+.carousel-control .icon-prev {
+  margin-left: -15px;
+}
+.carousel-control .icon-left-open-big,
+.carousel-control .icon-right-open-big,
+.carousel-control .icon-next,
+.carousel-control .icon-prev {
+  width: 50px;
+  height: 50px;
+  margin-top: -25px;
+  font-size: 50px;
+}
+.carousel-control .icon-right-open-big,
+.carousel-control .icon-next {
+  right: 50%;
+}
+.carousel-control .icon-left-open-big,
+.carousel-control .icon-prev {
+  left: 50%;
+}
+.carousel-control .icon-left-open-big,
+.carousel-control .icon-right-open-big,
+.carousel-control .icon-next,
+.carousel-control .icon-prev {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  display: inline-block;
+  margin-top: -25px;
+}
 @font-face {
   font-family: 'fontello';
-  src: url('../fonts/fontello.eot?82012261');
-  src: url('../fonts/fontello.eot?82012261#iefix') format('embedded-opentype'), url('../fonts/fontello.woff?82012261') format('woff'), url('../fonts/fontello.ttf?82012261') format('truetype'), url('../fonts/fontello.svg?82012261#fontello') format('svg');
+  src: url('../fonts/fontello.eot?8192798');
+  src: url('../fonts/fontello.eot?8192798#iefix') format('embedded-opentype'), url('../fonts/fontello.woff?8192798') format('woff'), url('../fonts/fontello.ttf?8192798') format('truetype'), url('../fonts/fontello.svg?8192798#fontello') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -2048,7 +2093,7 @@ div#bottom2 .module ul.menu > li a {
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'fontello';
-    src: url('../font/fontello.svg?82012261#fontello') format('svg');
+    src: url('../fonts/fontello.svg?8192798#fontello') format('svg');
   }
 }
 */
@@ -2157,6 +2202,18 @@ div#bottom2 .module ul.menu > li a {
   content: '\e80f';
 }
 /* '' */
+.icon-right-open-big:before {
+  content: '\e810';
+}
+/* '' */
+.icon-left-open-big:before {
+  content: '\e811';
+}
+/* '' */
+.icon-up-open-big:before {
+  content: '\e812';
+}
+/* '' */
 /*!
  * animsition v4.0.0
  * A simple and easy jQuery plugin for CSS animated page transitions.
