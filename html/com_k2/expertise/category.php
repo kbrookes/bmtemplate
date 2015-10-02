@@ -41,7 +41,7 @@ defined('_JEXEC') or die; ?>
 					</div>
 					
 					<div class="nextSection text-center">
-						<a class="scroll" href="#consultAnchor"><i class="fa fa-chevron-down"></i></a>
+						<a class="scroll" href="#consultAnchor"><i class="icon-down-open-big"></i></a>
 					</div>
 				</header>
 			</div>
@@ -110,7 +110,7 @@ defined('_JEXEC') or die; ?>
 				</div>
 				
 				<div class="nextSection text-center">
-					<a class="scroll" href="#createAnchor"><i class="fa fa-chevron-down"></i></a>
+					<a class="scroll" href="#createAnchor"><i class="icon-down-open-big"></i></a>
 				</div>
 				
 				<?php elseif($child->title=='Create'): ?>
@@ -125,7 +125,7 @@ defined('_JEXEC') or die; ?>
 				</div>
 				
 				<div class="nextSection text-center">
-					<a class="scroll" href="#expressAnchor"><i class="fa fa-chevron-down"></i></a>
+					<a class="scroll" href="#expressAnchor"><i class="icon-down-open-big"></i></a>
 				</div>
 				
 				<?php endif; ?>
