@@ -228,7 +228,7 @@ require_once __DIR__ . '/functions/tpl-init.php';
 				</div>
 			</div>
 			<?php if ($totop) : ?>
-					<a href="#" class="go-top">Back to Top <i class="fa fa-arrow-circle-up"></i></a>
+					<a href="#" class="go-top"><i class="fa fa-chevron-up"></i></a>
 					<?php endif; ?>
 		</footer>
 <div id="sidebar">
