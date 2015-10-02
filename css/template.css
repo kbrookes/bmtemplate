@@ -2848,7 +2848,7 @@ header#header {
 	left: 0;
 	z-index: 1030;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 	header#header {
 	    margin-bottom: 0;
 	    position: inherit;
