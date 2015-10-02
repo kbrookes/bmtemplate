@@ -20,7 +20,7 @@ defined('_JEXEC') or die ;
 		<div class="row">
 	    <?php foreach ($items as $key=>$item):	?>
 		    <div class="col-xs-12 col-sm-4 teamPostItem" data-mh="teamPostItem">
-			    <a tabindex="<?php echo $key;?>"  class="teamPostButton" id="teamMember<?php echo $key; ?>"  data-toggle="modal" data-backdrop="false" data-escape="true" data-target="#teamModal<?php echo $key; ?>">
+			    <a tabindex="<?php echo $key;?>"  class="teamPostButton" id="teamMember<?php echo $key; ?>"  data-toggle="modal" data-backdrop="false" data-escape="true" data-keyboard="true" data-target="#teamModal<?php echo $key; ?>">
 				    <div class="teamPostButton">
 				    <?php if($params->get('itemImage') && $item->image): ?>
 				    	<img src="<?php echo $item->image->src; ?>" alt="<?php echo htmlspecialchars($item->image->alt); ?>" id="teamPic<?php echo $key; ?>" class="img-responsive"/>
@@ -77,18 +77,18 @@ defined('_JEXEC') or die ;
     function reposition() {
         var modal = $(this),
             dialog = modal.find('.modal-dialog');
-        modal.css('display', 'block');
+			modal.css('display', 'block');
         
         // Dividing by two centers the modal exactly, but dividing by three 
         // or four works better for larger screens.
         dialog.css("margin-top", Math.max(0, ($(window).height() - dialog.height()) / 2));
     }
-    // Reposition when a modal is shown
-    $('.modal').on('show.bs.modal', reposition);
-    // Reposition when the window is resized
-    $(window).on('resize', function() {
-        $('.modal:visible').each(reposition);
-    });
+	    // Reposition when a modal is shown
+	    $('.modal').on('show.bs.modal', reposition);
+	    // Reposition when the window is resized
+	    $(window).on('resize', function() {
+	        $('.modal:visible').each(reposition);
+	    });
     
     <?php if(count($items)): ?>
 		<?php foreach ($items as $key=>$item):	?>
