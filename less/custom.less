@@ -1,12 +1,12 @@
 ///// COLOURS
 
-@green: #80c721;
+@green: #7dc620;
 @green-dark: #649f1a;
 @white: #fff;
 @offwhite: #f6f7f7;
 @grey-light: #eeeff0;
 @grey-mid: #798f99;
-@grey-dark: #526168;
+@grey-dark: #526269;
 @grey-footer-text: #a9a9a9;
 
 
@@ -28,12 +28,12 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-	color: @grey-mid;
+	color: @grey-dark;
 	font-family: @header-normal;
 }
 
 p {
-	color: @grey-mid;
+	color: @grey-dark;
 }
 
 //// GENERAL
@@ -70,6 +70,11 @@ a:hover, a:focus, a:active {
 	text-decoration: none;
 }
 
+a.go-top {
+	background-color: fade(@grey-dark, 50%);
+	line-height: 1em;
+}
+
 ul {
 	padding-left: 20px;
 	margin: 0 0 20px;
@@ -92,11 +97,23 @@ ul {
 	font-family: @header;
 	font-weight: @header-normal;
 	transition: all 0.3s ease;
-	&:hover {
+	/*&:hover {
 		background: @white;
 		color: @grey-dark;
 		i.fa { 
 			color: @grey-dark;
+		}
+	}
+	i.fa {
+		color: @white;
+		transition: all 0.3s ease;
+	}*/
+	&:hover {
+		background: @green;
+		border-color: @white;
+		color: @white;
+		i.fa { 
+			color: @white;
 		}
 	}
 	i.fa {
@@ -134,7 +151,8 @@ ul {
 	font-weight: @header-normal;
 	transition: all 0.3s ease;
 	&:hover {
-		background: @grey-dark;
+		background: @green;
+		border-color: @white;
 		color: @white;
 		i.fa { 
 			color: @white;
@@ -174,6 +192,23 @@ ul {
 	i.fa {
 		color: @white;
 		transition: all 0.3s ease;
+	}
+}
+
+.btn-default.active.focus,
+.btn-default.active:focus,
+.btn-default.active:hover,
+.btn-default.focus:active,
+.btn-default:active:focus,
+.btn-default:active:hover,
+.open > .dropdown-toggle.btn-default.focus,
+.open > .dropdown-toggle.btn-default:focus,
+.open > .dropdown-toggle.btn-default:hover {
+	background: @green;
+	border-color: @white;
+	color: @white;
+	i.fa { 
+		color: @white;
 	}
 }
 
