@@ -87,7 +87,7 @@ $document->addScript('https://cdnjs.cloudflare.com/ajax/libs/picturefill/2.3.1/p
 	</div>
 	
 	<div class="scrollNext text-center">
-		<a class="scroll" href="#ourValues"><i class="fa fa-chevron-down"></i></a>
+		<a class="scroll" href="#ourValues"><i class="icon-down-open-big"></i></a>
 	</div>
 	
 </article>
