@@ -113,6 +113,7 @@ header {
 }
 
 #header {
+	box-shadow: 0 0 8px @grey-light;
 	.container {
 		@media @large-tablet-portrait-and-smaller {
 			padding-bottom: 10px;
@@ -124,6 +125,9 @@ header {
 ////// SLIDESHOW
 
 #slider {
+	.caseStudiesPage & {
+		background-color: transparent;
+	}
 	margin-top: -10px;
 	.container {
 		@media @tablet-portrait-and-bigger {
@@ -291,6 +295,9 @@ header {
 ///// FEATURED CASE STUDIES ON FRONT PAGE
 
 .featuredCaseStudies {
+	#caseStudiesHome {
+		background: @grey-dark;
+	}
 	.headline {
 		background: @grey-dark;
 		color: @white;
@@ -342,6 +349,7 @@ header {
 	.caseStudyItem {
 		background-size: cover;
 		background-position: center center;
+		cursor: pointer;
 		.caseStudyButton {
 			.caseStudyButtonInner {
 				background:fade(#275700, 30%);;
@@ -555,11 +563,11 @@ header {
 			margin-bottom: 10px;
 		}
 		h3 {
-			color: @grey-mid;
+			color: @grey-dark;
 			.font-size(1.8);
 			margin: 0 0 8px 0;
 			a {
-				color: @grey-mid;
+				color: @grey-dark;
 			}
 		}
 		p {
@@ -700,7 +708,7 @@ header {
 	padding: 20px 65px 20px 20px;
 	font-family: inherit;
 	font-size: 20px;
-	color: @grey-mid;
+	color: @grey-dark;
 }
 
 .sb-search-input::-webkit-input-placeholder {
@@ -746,7 +754,7 @@ header {
 }
 
 .sb-icon-search {
-	color: @grey-mid;
+	color: @grey-dark;
 	background: none;
 	z-index: 90;
 	font-size: 22px;
@@ -769,7 +777,7 @@ header {
 .sb-search.sb-search-open .sb-icon-search,
 .no-js .sb-search .sb-icon-search {
 	background: none;
-	color: @grey-mid;
+	color: @grey-dark;
 	z-index: 11;
 }
 
@@ -836,7 +844,7 @@ header {
 		position: relative;
 		text-align: center;
 		h3, h4 {
-			color: @grey-mid;
+			color: @grey-dark;
 			margin: 0;
 		}
 		.linkedInIcon {
@@ -865,13 +873,13 @@ header {
 				margin: 0 0 4px 0;
 			}
 			h4 {
-				color: @grey-mid;
+				color: @grey-dark;
 				margin: 0;
 			}
 		}
 		.modal-body {
 			p {
-				color: @grey-mid;
+				color: @grey-dark;
 				margin: 0 0 10px;
 			}
 		}
@@ -915,6 +923,22 @@ header {
 	}
 }
 
+
+//// CASE STUDY SLIDER
+
+.caseStudiesPage {
+	#above-content {
+		.modal-content {
+			overflow: visible;
+			.ls-v5 .ls-bottom-slidebuttons,
+			.ls-v5 .ls-nav-start,
+			.ls-v5 .ls-nav-stop,
+			.ls-v5 .ls-nav-sides {
+				top: 12px;
+			}
+		}
+	}
+}
 
 //// You might also like
 
@@ -1060,13 +1084,13 @@ div#bottom2 {
 .lightModule {
 	background: @white;
 	h2.moduleTitle {
-		color: @grey-mid;
+		color: @grey-dark;
 	}
 	h3 {
 		color: @green;
 	}
 	p {
-		color: @grey-mid;
+		color: @grey-dark;
 	}
 	.btn-default {
 		.btn-dark;
@@ -1076,13 +1100,13 @@ div#bottom2 {
 .offWhiteModule {
 	background: @offwhite;
 	h2.moduleTitle {
-		color: @grey-mid;
+		color: @grey-dark;
 	}
 	h3 {
-		color: @grey-mid;
+		color: @grey-dark;
 	}
 	p {
-		color: @grey-mid;
+		color: @grey-dark;
 	}
 	.btn-default {
 		.btn-dark;
