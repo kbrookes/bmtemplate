@@ -25,6 +25,9 @@ K2HelperUtilities::setDefaultImage($this->item, 'itemlist', $this->params);
 	
 	<a href="<?php echo $this->item->link; ?>">
 		<div class="blogCatItemImage" <?php if($this->item->params->get('catItemImage') && !empty($this->item->image)): ?>style="background-image: url(<?php echo $this->item->image; ?>);"<?php endif; ?>>
+		<?php if($this->item->params->get('catItemImage') && !empty($this->item->image)): ?>
+	    	<img src="<?php echo $this->item->image; ?>" class="blogItemImage" />
+    	<?php endif; ?>
 		<?php if ($this->item->params->get('catItemReadMore')): ?>
 			<div class="blogItemReadMore text-center">
 				<button class="btn btn-default btn-lg btn-green" >
