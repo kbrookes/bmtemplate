@@ -14,16 +14,16 @@ p {
   color: #526269;
 }
 body {
-  padding-top: 87px;
+  padding-top: 78px;
 }
 @media only screen and (max-width: 1199px) {
   body {
-    padding-top: 76px;
+    padding-top: 66px;
   }
 }
 @media only screen and (max-width: 991px) {
   body {
-    padding-top: 0;
+    padding-top: 50px;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -61,6 +61,10 @@ ul li {
 }
 .btn {
   border-radius: 2px;
+}
+.btn-default {
+  padding-left: 32px;
+  padding-right: 32px;
 }
 .btn-white,
 .btn-light {
@@ -279,6 +283,9 @@ ul li {
 .frontpage #mainbody {
   background: #f6f7f7;
   padding-bottom: 50px;
+}
+.aboutPage #mainbody {
+  background: #f6f7f7;
 }
 #blogView .itemListCategoriesBlock {
   margin-bottom: 50px;
@@ -617,6 +624,8 @@ ul li {
   margin: 0 0 40px;
 }
 .expertisePage .expertiseSubCategory {
+  font-size: 45px;
+  font-size: 4.5rem;
   padding-top: 80px;
   padding-bottom: 30px;
   position: relative;
@@ -760,6 +769,8 @@ ul li {
   margin: 0 6px 0 16px;
 }
 .itemHeader h2.itemTitle {
+  font-size: 50px;
+  font-size: 5rem;
   margin-bottom: 50px;
   text-align: center;
 }
@@ -902,7 +913,7 @@ header .logo {
 }
 @media only screen and (max-width: 767px) {
   header .logo {
-    margin-top: 9px;
+    margin-top: 15px;
     margin-bottom: 9px;
     width: 140px;
   }
@@ -925,6 +936,11 @@ header .navbar-brand img {
 }
 header #menu .navbar-collapse {
   margin-right: 30px;
+}
+@media only screen and (max-width: 991px) {
+  header #menu .navbar-collapse {
+    margin-right: 42px;
+  }
 }
 @media only screen and (max-width: 767px) {
   header #menu .navbar-collapse {
@@ -1010,11 +1026,6 @@ header .navbar-nav > li:hover > a:after {
 }
 #header {
   box-shadow: 0 0 8px #eeeff0;
-}
-@media only screen and (max-width: 767px) {
-  #header .container {
-    padding-bottom: 10px;
-  }
 }
 #slider {
   margin-top: -10px;
@@ -1613,14 +1624,20 @@ header .navbar-nav > li:hover > a:after {
 @media only screen and (max-width: 1199px) {
   #navSearch .sb-search {
     width: 28px;
+    margin-top: 17px;
     min-width: 28px;
   }
 }
 @media only screen and (max-width: 991px) {
   #navSearch .sb-search {
     width: 28px;
-    margin-top: 9px;
+    margin-top: 10px;
     min-width: 28px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #navSearch .sb-search {
+    margin-top: 6px;
   }
 }
 #navSearch .sb-search .sb-search-input {
@@ -1905,10 +1922,16 @@ div#bottom1 {
 }
 div#bottom1 .newsletterSubs h3 {
   color: #ffffff;
+  font-size: 23px;
+  font-size: 2.3rem;
   text-transform: inherit;
 }
 div#bottom1 .newsletterSubs form input.rsform-button {
   font-family: FontAwesome;
+  width: 100%;
+}
+div#bottom1 .newsletterSubs .btn-default {
+  width: 100%;
 }
 .resourceDownload {
   position: relative;
@@ -1964,17 +1987,43 @@ div#bottom2 .module ul.menu > li a {
 #footer .container .footertext a {
   color: #a9a9a9;
 }
-#footer .footertext i,
-#footer .container .footertext i {
-  color: #a9a9a9;
-  font-size: 8px;
-  font-size: 0.8rem;
+#footer .footertext ul,
+#footer .container .footertext ul {
+  list-style: disc;
+  padding: 0;
+  margin: 0;
+}
+#footer .footertext ul li,
+#footer .container .footertext ul li {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  list-style-type: disc;
+  display: inline-block;
+  padding: 0 16px;
+  position: relative;
+}
+#footer .footertext ul li:before,
+#footer .container .footertext ul li:before {
+  content: '\2022';
+  left: -2px;
+  position: absolute;
+}
+#footer .footertext ul li:first-child:before,
+#footer .container .footertext ul li:first-child:before {
+  content: '';
+  display: none;
 }
 #valuesBlock,
 #callBlock,
 #differencesBlock,
 #teamBlock {
   padding: 80px 0;
+}
+#valuesBlock h2,
+#callBlock h2,
+#differencesBlock h2,
+#teamBlock h2 {
+  font-size: 45px;
+  font-size: 4.5rem;
 }
 #valuesBlock .singleItemWrap,
 #callBlock .singleItemWrap,
