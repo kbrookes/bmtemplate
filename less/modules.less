@@ -362,7 +362,7 @@ header {
 		cursor: pointer;
 		.caseStudyButton {
 			.caseStudyButtonInner {
-				background:fade(#275700, 30%);;
+				background:@grey-dark;;
 				transition: 0.3s ease background;
 				&:after {
 				    content:'';
@@ -404,7 +404,7 @@ header {
 			}
 			&:hover {
 				.caseStudyButtonInner {
-					background: fade(#275700, 30%);
+					background:rgba(19,59,0,0.6);
 				}
 			}
 		}
@@ -966,7 +966,7 @@ header {
 		text-align: center;
 		h4 {
 			color: @white;
-			.font-size(4);
+			.font-size(4.5);
 			margin: 0;
 		}
 	}
@@ -981,6 +981,7 @@ header {
 		}
 		p {
 			color: @white;
+			line-height: 1.8em;
 		}
 	}
 }
