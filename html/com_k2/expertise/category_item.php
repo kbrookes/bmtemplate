@@ -12,12 +12,12 @@ defined('_JEXEC') or die;
 
 // Define default image size (do not change)
 K2HelperUtilities::setDefaultImage($this->item, 'itemlist', $this->params);
-$isFirstItem=0;
+/*$isFirstItem=0;
 if($this->item->title=='Stakeholder engagement' || $this->item->title=='Brand positioning & strategy' || $this->item->title=='Graphic design'):
 	$isFirstItem=1;
 	else:
 	$isFirstItem=0;
-endif;
+endif;*/
 ?>
 
 <!-- Start K2 Item Layout -->
@@ -27,7 +27,7 @@ endif;
 			<h4 class="panel-title"><?php echo $this->item->title; ?> <span class="pull-right"><i class="indicator fa fa-plus-circle"></i></span></h4>
         </a>
     </div>
-	<div id="collapse<?php echo $this->item->id; ?>" class="panel-collapse collapse<?php if($isFirstItem):?> in<?php endif; ?> " role="tabpanel" aria-labelledby="heading<?php echo $this->item->id; ?>">
+	<div id="collapse<?php echo $this->item->id; ?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading<?php echo $this->item->id; ?>">
 		<div class="panel-body">
 		<?php if($this->item->params->get('catItemIntroText')): ?>
 		  	<?php echo $this->item->introtext; ?>
