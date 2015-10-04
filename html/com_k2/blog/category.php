@@ -142,7 +142,7 @@ defined('_JEXEC') or die;
 	
 	
 	<div class="row resourceButtons">
-		<div class="resourceFilter  col-xs-12">
+		<div class="resourceFilter hidden-xs col-sm-12">
 			<div class="btn-group btn-group-justified filter-button-group" role="group">
 				<div class="btn-group" role="group">
 					<button type="button" class="btn btn-default btn-dark filter" data-filter="*">Latest</button>
@@ -176,6 +176,27 @@ defined('_JEXEC') or die;
 				<div class="btn-group" role="group">
 					<button type="button" class="btn btn-default btn-dark filter" data-filter=".brandcommentary">Brand commentary</button>
 				</div>
+			</div>
+		</div>
+		<div class="resourceFilter col-xs-12 visible-xs text-center">
+			<!-- Single button -->
+			<div class="btn-group filter-dropdown-link ">
+				<button type="button" class="btn btn-default btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Blog filter <i class="icon-down-open-big"></i>
+				</button>
+				<ul class="dropdown-menu">
+				    <li><a data-filter="*">Latest</a></li>
+					<li role="separator" class="divider"></li>
+				    <li><a data-filter=".stakeholderengagement">Stakeholder engagement</a></li>
+				    <li><a data-filter=".researchinsights">Research &amp; insights</a></li>
+				    <li><a data-filter=".brandpositioningstrategy, .brandstorytoneofvoicekeymessaging, .customervaluepropositioncv">Brand strategy</a></li>
+				    <li><a data-filter=".brandarchitecture">Brand architecture</a></li>
+				    <li><a data-filter=".employeebrandingemployeevaluepropositionevp">Employee branding</a></li>
+				    <li><a data-filter=".brandnaming">Brand naming</a></li>
+				    <li><a data-filter=".brandlogoidentitydesign">Brand design</a></li>
+				    <li><a data-filter=".marketingcommunication, .brandmanagementmaintenancemeasurement">Marketing comms</a></li>
+				    <li><a data-filter=".brandcommentary">Brand commentary</a></li>			   
+				</ul>
 			</div>
 		</div>
 	</div>
@@ -421,6 +442,10 @@ $tplUrl = JURI::root() . 'templates/' . JFactory::getApplication()->getTemplate(
 		});		*/
 	$(document).ready(function(){
 		$container.isotope();
+	});
+	$('.filter-dropdown-link').on( 'click', 'a', function() {
+	  var filterValue = $(this).attr('data-filter');
+	  $grid.isotope({ filter: filterValue });
 	});
 })( jQuery );
 </script>
