@@ -313,16 +313,28 @@ ul li {
   line-height: 1.2em;
   margin: 0 0 8px;
 }
+@media only screen and (max-width: 1199px) {
+  #blogView .blogCatItemContent h3 {
+    font-size: 22px;
+    font-size: 2.2rem;
+  }
+}
 #blogView .blogCatItemContent h3 a {
   color: #526269;
 }
 #blogView .blogCatItemContent h3 a:hover {
   color: #eeeff0;
 }
-#blogView .blogCatItemContent p {
+#blogView .blogCatItemContent .blogItemIntro {
   font-size: 16px;
   font-size: 1.6rem;
   margin: 0 0 1em;
+}
+@media only screen and (max-width: 1199px) {
+  #blogView .blogCatItemContent .blogItemIntro {
+    font-size: 15px;
+    font-size: 1.5rem;
+  }
 }
 #blogView .blogCatItemImage {
   background-position: center center;
@@ -363,11 +375,13 @@ ul li {
   opacity: 1;
   width: 100%;
 }
-#blogView #itemListLeading .col-xs-4,
-#blogView #itemListLeading .col-sm-4,
-#blogView #itemListLeading .col-md-4,
-#blogView #itemListLeading .col-lg-4 {
-  width: 33.3%;
+@media only screen and (min-width: 992px) {
+  #blogView #itemListLeading .col-xs-4,
+  #blogView #itemListLeading .col-sm-4,
+  #blogView #itemListLeading .col-md-4,
+  #blogView #itemListLeading .col-lg-4 {
+    width: 33.3%;
+  }
 }
 #blogView .socialToolbar {
   line-height: 3.5rem;
@@ -441,6 +455,7 @@ ul li {
   color: #526269;
   font-size: 18px;
   font-size: 1.8rem;
+  line-height: 1.2em;
   margin: 0;
 }
 #resourceView .resourceItem p {
@@ -476,6 +491,14 @@ ul li {
   font-size: 35px;
   font-size: 3.5rem;
   margin: 0 0 30px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  #resourceView #itemListLeading .col-xs-4,
+  #resourceView #itemListLeading .col-sm-4,
+  #resourceView #itemListLeading .col-md-4,
+  #resourceView #itemListLeading .col-lg-4 {
+    width: 33.3%;
+  }
 }
 .caseStudiesPage #top {
   background-color: #526269;
@@ -888,11 +911,51 @@ ul li {
 .pageWithModules .itemView .bannerButtons {
   padding-bottom: 30px;
 }
-.resourceFilter {
+.filter-button-group {
   margin-bottom: 15px;
 }
-.resourceFilter .btn-group {
+.filter-button-group .btn-group {
   margin-bottom: 15px;
+}
+@media only screen and (max-width: 991px) {
+  .filter-button-group .btn-group {
+    padding-left: 0;
+  }
+}
+.filter-button-group .btn-group .btn-default {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+@media only screen and (max-width: 991px) {
+  .filter-button-group .btn-group .btn-default {
+    border-left-width: 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .filter-button-group .btn-group .btn-default {
+    font-size: 12px;
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .filter-button-group .btn-group:first-child .btn-default {
+    border-left-width: 1px;
+  }
+}
+.filter-dropdown-link .btn-default {
+  height: 50px;
+}
+.filter-dropdown-link .dropdown-menu {
+  width: 100%;
+}
+.blogPage .resourceFilter {
+  margin-bottom: 30px;
+}
+@media only screen and (max-width: 991px) {
+  .blogPage .resourceFilter .btn-group .btn-default {
+    font-size: 12px;
+    font-size: 1.2rem;
+  }
 }
 .searchView .k2SearchBlock {
   margin: 40px auto;
