@@ -25,14 +25,14 @@ defined('_JEXEC') or die; ?>
 				<?php endif; ?>
 				
 					<div class="row">
-						<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-offset-1 col-lg-8 col-lg-offset-2">
+						<div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
 							<div class="row expertiseButtons">
 							<?php $counter = 0; foreach($this->category->children as $child): ?>
 								<div class="col-xs-4">
 									<a href="#<?php echo strtolower($child->title); ?>Anchor" class="scroll">
 										<h3><?php echo $child->title; ?></h3>
 										<h4><i class="icon-<?php echo strtolower($child->title); ?>"></i></h4>
-										<button class="btn btn-lg btn-default btn-green matchWidth">View more</button>
+										<button class="btn btn-lg btn-default btn-white matchWidth">View more</button>
 									</a>
 								</div>
 							<?php $counter++; endforeach; ?>
