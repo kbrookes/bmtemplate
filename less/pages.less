@@ -40,20 +40,27 @@
 	.blogItem {
 		margin-bottom: 30px;
 	}
-	.blogCatItemContent h3,
-	.blogCatItemContent h3 a {
-		color: @grey-dark;
-		.font-size(1.8);
-		line-height: 22px;
-		margin: 0 0 2px;
-		&:hover {
-			color: @grey-light;
+	.blogCatItemContent {
+		h3 {
+			.font-size(2.4);
+			line-height: 1.2em;
+			margin: 0 0 8px;
+			a {
+			color: @grey-dark;
+				&:hover {
+					color: @grey-light;
+				}
+			}
+		}
+		p {
+			.font-size(1.6);
+			margin: 0 0 1em;
 		}
 	}
 	.blogCatItemImage {
 		background-position: center center;
 		background-size: cover;
-		margin-bottom: 10px;
+		margin-bottom: 20px;
 		padding-bottom: 43%;
 		position: relative;
 		.blogItemImage {
@@ -174,14 +181,21 @@
 	}
 	/// Cateogry Items
 	.resourceItem {
+		margin-bottom: 30px;
 		h3 {
 			color: @grey-dark;
-			.font-size(2);
+			.font-size(1.8);
+			margin: 0;
+		}
+		p {
+			.font-size(1.4);
+			margin: 0 0 1em;
 		}
 	}
 	.resourceCatItemImage {
 		background-position: center center;
 		background-size: cover;
+		margin-bottom: 14px;
 		padding-bottom: 141%;
 		position: relative;
 		z-index: 100;
@@ -372,9 +386,54 @@
 		text-align: center;
 		header {
 			padding: 0 130px;
+			@media @tablet-landscape-and-smaller {
+				padding: 0 110px;
+			}
+			
+			@media @tablet-landscape-and-smaller {
+				padding: 0 80px;
+			}
+			@media @small-tablet-portrait-and-smaller {
+				padding: 0 30px;
+			}
+			@media @phone {
+				padding: 0;
+			}
+			
 			.expertiseButtons {
 				h3 {
 					color: @white;
+					@media @large-tablet-portrait-and-smaller {
+						.font-size(2.2);
+					}
+					@media @phone {
+						.font-size(1.8);
+					}
+					@media @small-phone {
+						.font-size(1.4);
+					}
+				}
+				.btn-default {
+					@media @large-tablet-portrait-and-smaller {
+						.font-size(1.6);
+						padding-left: 18px;
+						padding-right: 18px;
+					}
+					@media @small-tablet-portrait-and-smaller {
+						.font-size(1.6);
+						padding-left: 16px;
+						padding-right: 16px;
+					}
+					@media @phone {
+						.font-size(1.4);
+						padding-left: 10px;
+						padding-right: 10px;
+					}
+					@media @small-phone {
+						.font-size(1.2);
+						padding-left: 0;
+						padding-right: 0;
+					}
 				}
 			}
 		}
@@ -390,7 +449,6 @@
 		}
 	}
 	.expertiseSubCategory {
-		.font-size(4.5);
 		padding-top: 80px;
 		padding-bottom: 30px;
 		position: relative;
@@ -406,6 +464,7 @@
 		}
 		h2 {
 			color: @grey-dark;
+			.font-size(4.5);
 			margin: 0 0 40px;
 			text-align: center;
 		}
@@ -468,6 +527,20 @@
 			color: @green;
 			.font-size(7);
 			margin: 20px 0;
+			@media @small-tablet-portrait-and-smaller {
+				.font-size(6);
+			}
+			@media @phone {
+				.font-size(5);
+				margin: 9px 0 20px;
+			}
+			@media @small-phone {
+				.font-size(4);
+				margin: 9px 0 20px;
+			}
+		}
+		a.scroll h4 i:hover {
+			color: @grey-dark;
 		}
 	}
 	.nextSection {
