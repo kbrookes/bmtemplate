@@ -26,7 +26,7 @@ endif;
 ?>
 
 <!-- Start K2 Item Layout -->
-<div class="resourceItem col-xs-12 col-sm-6 col-md-3 <?php echo ltrim($abc,',');?> ">
+<div class="resourceItem col-xs-6 col-sm-4 col-md-3 <?php echo ltrim($abc,',');?> ">
 	
 	<a href="<?php echo $this->item->link; ?>">
 		<div class="resourceCatItemImage" <?php if($this->item->params->get('catItemImage') && !empty($this->item->image)): ?>style="background-image: url(<?php echo $this->item->image; ?>);"<?php endif; ?>>
