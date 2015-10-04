@@ -130,7 +130,7 @@ defined('_JEXEC') or die;
 	<?php endif; ?>
 
 	<div class="row resourceButtons">
-		<div class="resourceFilter  col-xs-12">
+		<div class="resourceFilter  col-sm-12 hidden-xs">
 			<div class="btn-group btn-group-justified filter-button-group" role="group">
 				<div class="btn-group" role="group">
 					<button type="button" class="btn btn-default btn-dark" data-filter="*">All</button>
@@ -150,6 +150,23 @@ defined('_JEXEC') or die;
 				<div class="btn-group" role="group">
 					<button type="button" class="btn btn-default btn-dark" data-filter=".Checklists">Checklists</button>
 				</div>
+			</div>
+		</div>
+		<div class="resourceFilter  col-xs-12 visible-xs text-center">
+			<!-- Single button -->
+			<div class="btn-group filter-dropdown-link ">
+				<button type="button" class="btn btn-default btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Resource filter <i class="icon-down-open-big"></i>
+				</button>
+				<ul class="dropdown-menu">
+				    <li><a data-filter="*">All</a></li>
+					<li role="separator" class="divider"></li>
+				    <li><a data-filter=".Financial">Financial services</a></li>
+				    <li><a data-filter=".Guides">Guides</a></li>
+				    <li><a data-filter=".Templates">Templates</a></li>
+				    <li><a data-filter=".Fact">Fact sheets</a></li>
+				    <li><a data-filter=".Checklists">Checklists</a></li>			   
+				</ul>
 			</div>
 		</div>
 	</div>
@@ -304,6 +321,10 @@ $tplUrl = JURI::root() . 'templates/' . JFactory::getApplication()->getTemplate(
 	$('.filter-button-group').on( 'click', 'button', function() {
 	  var filterValue = $(this).attr('data-filter');
 	  $grid.isotope({ filter: filterValue });
-});
+	});
+	$('.filter-dropdown-link').on( 'click', 'a', function() {
+	  var filterValue = $(this).attr('data-filter');
+	  $grid.isotope({ filter: filterValue });
+	});
 })( jQuery );
 </script>
