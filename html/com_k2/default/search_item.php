@@ -10,6 +10,7 @@
 // no direct access
 defined('_JEXEC') or die ;
 $textIntro = $this->item->introtext;
+$textIntro = strip_tags($textIntro);
 ?>
 
 <article class="itemlistItemView <?php if($this->item->params->get('pageclass_sfx')) echo ' '.$this->item->params->get('pageclass_sfx'); ?>" itemscope itemtype="http://schema.org/Article">
