@@ -233,7 +233,7 @@ require_once __DIR__ . '/functions/tpl-init.php';
 		</footer>
 <div id="sidebar">
 					<div id="panel-overview">
-					<div style="text-align: center;"><a href="<?php echo $this->baseurl ?>/" class="<?php echo $icon1; ?>"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#page" class="<?php echo $icon6; ?>"></a></div>
+					<div style="text-align: center;"><a href="<?php echo $this->baseurl ?>/" class="icon-up-open-big"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#page" class="icon-close"></a></div>
 					<?php if ($this->countModules('mob-menu-above')): ?>
 					<div class="mob-menu-above">
 							<jdoc:include type="modules" name="mob-menu-above" style="standard" />
