@@ -35,6 +35,9 @@ defined('_JEXEC') or die ;
 				<a class="btn btn-default btn-lg btn-white" href="<?php echo $params->get('itemCustomLinkURL'); ?>"  data-mh="formButton"><?php echo $params->get('itemCustomLinkTitle'); ?> <i class="fa fa-angle-double-right"></i></a>
 			</div>
 		</div>
+		<div class="scrollNext text-center">
+			<a class="scroll" href="#whenToCall"><i class="icon-down-open-big"></i></a>
+		</div>
 	</div>
 </div>
 
