@@ -14,7 +14,10 @@ defined('_JEXEC') or die ; ?>
 <?php if(count($items)): ?>
 	<div class="row">
     <?php foreach ($items as $key=>$item):	?>
+    	<?php if($params->get('itemAttachments') && count($item->attachments)): ?><?php foreach ($item->attachments as $attachment): ?><a title="<?php echo htmlspecialchars($attachment->title); ?>" href="<?php echo $attachment->link; ?>"><?php echo $attachment->title; ?></a><?php endforeach; ?>
+    	<?php else: ?>
     	<a href="<?php echo $item->link; ?>">
+    	<?php endif; ?>
 		    <div class="col-xs-12 col-sm-4 resourceItem <?php if($item->featured):?>featuredResource<?php endif; ?>" <?php if($item->featured):?>data-mh="resourceItemTall"<?php else:?>data-mh="resourceItemShort"<?php endif;?>>
 			    <div class="resourceInnerWrap">
 				    <h3 data-mh="resourceTitle"><?php echo $item->title;?></h3>
