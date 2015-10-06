@@ -205,6 +205,9 @@ ul li {
 .bannerButtons .matchWidth:last-child {
   margin-right: 0;
 }
+.testimonialButtons .bannerButtons .matchWidth {
+  width: 220px;
+}
 .verticalButtons {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -213,6 +216,9 @@ ul li {
   display: block;
   margin: 0 0 8px;
   min-width: 200px;
+}
+.caseStudyContentColInner .verticalButtons .matchWidth {
+  width: 220px;
 }
 .scrollBlock {
   font-size: 28px;
@@ -324,7 +330,7 @@ ul li {
   color: #526269;
 }
 #blogView .blogCatItemContent h3 a:hover {
-  color: #eeeff0;
+  color: #7dc620;
 }
 #blogView .blogCatItemContent .blogItemIntro {
   font-size: 16px;
@@ -457,7 +463,7 @@ ul li {
   font-size: 18px;
   font-size: 1.8rem;
   line-height: 1.2em;
-  margin: 0;
+  margin: 0 0 4px;
 }
 #resourceView .resourceItem p {
   font-size: 14px;
@@ -583,6 +589,11 @@ ul li {
 #caseStudyView h3 {
   color: #526269;
   font-weight: 400;
+}
+#caseStudyView p {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
 }
 #caseStudyView .itemNavigation {
   padding: 40px 0;
@@ -979,6 +990,20 @@ ul li {
 }
 .darkModule .scrollNext a.scroll:hover {
   color: #7dc620;
+}
+#valuesModuleAbout .scrollNext a,
+#testimonialCarousel .scrollNext a {
+  color: #ffffff;
+}
+#valuesModuleAbout .scrollNext a:hover,
+#testimonialCarousel .scrollNext a:hover {
+  color: #7dc620;
+}
+#testimonialCarousel .scrollNext {
+  margin-top: -30px;
+  padding-bottom: 30px;
+  position: relative;
+  z-index: 2000;
 }
 .searchView .k2SearchBlock {
   margin: 40px auto;
@@ -1530,6 +1555,9 @@ header .navbar-nav > li:hover > a:after {
 .featuredCaseStudies .caseStudyItem .caseStudyButton:hover .caseStudyButtonInner {
   background: rgba(19, 59, 0, 0.6);
 }
+.caseStudiesPage .featuredCaseStudies .caseStudyItem .caseStudyButtonInner {
+  background: transparent;
+}
 .frontpage #mainbody > .container {
   padding-bottom: 0;
 }
@@ -1684,12 +1712,15 @@ header .navbar-nav > li:hover > a:after {
   margin: 0 auto 30px auto;
   width: 20%;
 }
+#testimonialCarousel .carousel-indicators {
+  bottom: 60px;
+}
 #testimonialCarousel .carousel-indicators .active {
   background-color: #7dc620;
   border-color: #7dc620;
 }
 #testimonialCarousel .testimonialButtons {
-  bottom: 80px;
+  bottom: 110px;
   position: absolute;
   width: 100%;
   z-index: 2000;
@@ -1716,6 +1747,9 @@ header .navbar-nav > li:hover > a:after {
 }
 #blogModule .blogPostItem h3 a {
   color: #526269;
+}
+#blogModule .blogPostItem h3 a:hover {
+  color: #7dc620;
 }
 #blogModule .blogPostItem p {
   color: #526269;
@@ -1770,6 +1804,19 @@ header .navbar-nav > li:hover > a:after {
 #blogModule .blogPostButton:hover .blogItemReadMore {
   opacity: 1;
   width: 100%;
+}
+#blogModule .stupidAnchor {
+  top: -115px;
+}
+@media only screen and (max-width: 991px) {
+  #blogModule .stupidAnchor {
+    top: -110px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #blogModule .stupidAnchor {
+    top: -59px;
+  }
 }
 .k2SearchBlock form {
   border: 1px solid #526269;
