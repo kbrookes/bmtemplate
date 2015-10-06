@@ -10,7 +10,7 @@
 // no direct access
 defined('_JEXEC') or die ; ?>
 <span id="testimonialBlock" class="stupidAnchor"></span>
-<div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
+<div id="testimonialCarousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="13000">
 <?php if(count($items)): ?>
 	<ol class="carousel-indicators">
 	<?php foreach ($items as $key=>$item):	?>
