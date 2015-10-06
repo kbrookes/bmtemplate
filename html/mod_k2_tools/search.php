@@ -27,7 +27,7 @@ endif;
 <?php if($searchType=='expanding'):?>
 <div id="sb-search" class="k2SearchBlock <?php if($params->get('moduleclass_sfx')) echo ' '.$params->get('moduleclass_sfx'); if($params->get('liveSearch')) echo ' k2LiveSearchBlock'; ?>">
 	<form action="<?php echo $search->action; ?>" method="get" autocomplete="off" class="k2SearchBlockForm" data-mh="formButton">
-		<input class="sb-search-input searchInput" placeholder="<?php echo $search->text; ?>" type="text" value="" name="searchword" id="search">
+		<input class="sb-search-input searchInput" placeholder="Search brandmatters.com.au" type="text" value="" name="searchword" id="search">
 		<input class="sb-search-submit" type="submit" value="">
 		<span class="sb-icon-search"><i class="fa fa-search"></i></span>
 	</form>
