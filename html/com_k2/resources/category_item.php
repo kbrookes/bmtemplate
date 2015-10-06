@@ -27,7 +27,8 @@ endif;
 
 <!-- Start K2 Item Layout -->
 <div class="resourceItem col-xs-6 col-sm-4 col-md-3 <?php echo ltrim($abc,',');?> ">
-	
+<!-- LINK TO ARTICLE -->
+<?php if($this->item->featured):?>
 	<a href="<?php echo $this->item->link; ?>">
 		<div class="resourceCatItemImage" <?php if($this->item->params->get('catItemImage') && !empty($this->item->image)): ?>style="background-image: url(<?php echo $this->item->image; ?>);"<?php endif; ?>>
 		<?php if ($this->item->params->get('catItemReadMore')): ?>
@@ -57,7 +58,42 @@ endif;
 		</div>
 	<?php endif; ?>
 	</div>
-	
+<!-- /LINK TO ARTICLE -->
+<!-- LINK TO DOWNLOAD -->
+<?php else: ?>
+<?php foreach ($this->item->attachments as $attachment): ?>
+	<a href="<?php echo $attachment->link; ?>">
+		<div class="resourceCatItemImage" <?php if($this->item->params->get('catItemImage') && !empty($this->item->image)): ?>style="background-image: url(<?php echo $this->item->image; ?>);"<?php endif; ?>>
+		<?php if ($this->item->params->get('catItemReadMore')): ?>
+			<div class="resourceItemReadMore text-center">
+				<button class="btn btn-default btn-lg btn-green" >
+					Download now <i class="fa fa-angle-double-right"></i>
+				</button>
+			</div>
+		<?php endif; ?>
+	</div>
+	</a>
+		
+	<div class="resourceCatItemContent">
+	<?php if($this->item->params->get('catItemTitle')): ?>
+		<h3><?php if ($this->item->params->get('catItemTitleLinked')): ?>
+			<a href="<?php echo $this->item->link; ?>">
+	  			<?php echo $this->item->title; ?>
+	  		</a>
+	  		<?php else: ?>
+	  		<?php echo $this->item->title; ?>
+		  	<?php endif; ?>
+		</h3>
+	<?php endif; ?>
+	<?php if($this->item->params->get('catItemIntroText')): ?>
+		<div class="resourceItemIntro">
+		  	<?php echo $this->item->introtext; ?>
+		</div>
+	<?php endif; ?>
+	</div>
+<?php endforeach; ?>
+<!-- /LINK TO DOWNLOAD -->
+<?php endif; ?>
 </div>
 <!-- End K2 Item Layout -->
 
