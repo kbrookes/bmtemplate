@@ -66,3 +66,20 @@ endif;
 	</div>	
 </div>
 <!-- End K2 Item Layout -->
+
+<p>DOWNLOAD</p>
+<?php
+$doc = JFactory::getDocument();
+$app = JFactory::getApplication();
+
+$baseUrl = JURI::root();?>
+<?php foreach ($this->item->attachments as $attachment):
+	$downloadLink= $baseUrl . $attachment->link; 
+	echo '<h2>Download '. $downloadLink . '</h2>';
+endforeach; ?>
+
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		document.getElementById('downloadlink').value = <?php echo $downloadLink; ?> ;
+	});
+</script>
