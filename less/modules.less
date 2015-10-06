@@ -350,6 +350,9 @@ header {
 		}
 		.caseStudyContentCol {
 			padding-top: 40px;
+			.caseStudyContentColInner {
+				padding-left: 40px;
+			}
 		}
 		&.in {
 			
@@ -362,7 +365,7 @@ header {
 		cursor: pointer;
 		.caseStudyButton {
 			.caseStudyButtonInner {
-				background:@grey-dark;;
+				background:rgba(19,59,0,0.6);
 				transition: 0.3s ease background;
 				&:after {
 				    content:'';
@@ -472,11 +475,11 @@ header {
 				color: @green-dark;
 				.resourceDownloadIcon {
 					color: @white;
-					.font-size(4);
+					.font-size(3);
 					
 				}
 				.resourceDownloadIcon:before {
-					content: '\e801';
+					content: '\e802';
 				}
 			}
 		}
@@ -681,7 +684,7 @@ header {
 		position: relative;
 		margin-top: 24px;
 		//margin-right: -10px;
-		width: 0%;
+		width: 28px;
 		min-width: 28px;
 		//height: 40px;
 		float: right;
@@ -1257,6 +1260,38 @@ div#bottom2 {
     z-index: 5;
     display: inline-block;
     margin-top: -25px;
+}
+
+.carousel-fade {
+    .carousel-inner {
+        .item {
+            transition-property: opacity;
+        }
+        
+        .item,
+        .active.left,
+        .active.right {
+            opacity: 0;
+        }
+
+        .active,
+        .next.left,
+        .prev.right {
+            opacity: 1;
+        }
+
+        .next,
+        .prev,
+        .active.left,
+        .active.right {
+            left: 0;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .carousel-control {
+        z-index: 2;
+    }
 }
 
 
