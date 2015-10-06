@@ -48,12 +48,16 @@ defined('_JEXEC') or die ; ?>
 	<?php if($params->get('itemCustomLink')): ?>
 	<div class="testimonialButtons">
 		<div class="text-center bannerButtons">
-			<a class="btn btn-default btn-lg btn-grey-white matchWidth" href="<?php echo $params->get('itemCustomLinkURL'); ?>"><?php echo $params->get('itemCustomLinkTitle'); ?></a>
+			<a class="btn btn-default btn-lg btn-grey-white matchWidth" href="<?php echo $params->get('itemCustomLinkURL'); ?>#testimonialsList"><?php echo $params->get('itemCustomLinkTitle'); ?></a>
 			<a class="btn btn-default btn-lg btn-grey-white matchWidth" href="<?php echo $params->get('itemCustomLinkURL'); ?>#clientBlock">Our clients <i class="fa fa-angle-double-right"></i></a>
 		</div>
 	</div>
 	<?php endif; ?>
+	<div class="scrollNext text-center">
+	<a class="scroll" href="#blogModuleAnchor"><i class="icon-down-open-big"></i></a>
+</div>
 </div><!-- /.carousel -->
+
 
 
 
