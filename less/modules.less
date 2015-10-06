@@ -411,6 +411,11 @@ header {
 				}
 			}
 		}
+		.caseStudiesPage & {
+			.caseStudyButtonInner {
+				background: transparent;
+			}
+		}
 		
 	}
 }
@@ -548,12 +553,15 @@ header {
 			width: 20%;
 		}
 	}
+	.carousel-indicators {
+		bottom: 60px;
+	}
 	.carousel-indicators .active {
 		background-color: @green;
 		border-color: @green;
 	}
 	.testimonialButtons {
-		bottom: 80px;
+		bottom: 110px;
 		position: absolute;
 		width: 100%;
 		z-index: 2000;
@@ -579,6 +587,9 @@ header {
 			margin: 0 0 8px 0;
 			a {
 				color: @grey-dark;
+				&:hover {
+					color: @green;
+				}
 			}
 		}
 		p {
@@ -639,7 +650,18 @@ header {
 			}
 		}
 	}
+	.stupidAnchor {
+		top: -115px;
+		@media @tablet-landscape-and-smaller {
+			top: -110px;
+		}
+		@media @large-tablet-portrait-and-smaller {
+			top: -59px;
+		}
+	}
 }
+
+
 
 //// SEARCH
 
