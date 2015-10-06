@@ -31,7 +31,7 @@ defined('_JEXEC') or die ;
 					</div>
 			    </div>
 		    </a>
-		    <h3><?php echo $item->title; ?></h3>
+		    <h3><a title="<?php echo JText::_('K2_CONTINUE_READING'); ?> &quot;<?php echo htmlspecialchars($item->title); ?>&quot;"  href="<?php echo $item->link; ?>" class="blogPostButton"><?php echo $item->title; ?></a></h3>
 			<?php if($params->get('itemIntroText')): ?>
 				<?php echo $item->introtext; ?>
 			<?php endif; ?>
