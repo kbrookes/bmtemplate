@@ -30,6 +30,9 @@ defined('_JEXEC') or die ;
 				<a class="btn btn-default btn-lg btn-dark" href="<?php echo $params->get('itemCustomLinkURL'); ?>"  data-mh="formButton"><?php echo $params->get('itemCustomLinkTitle'); ?> <i class="fa fa-angle-double-right"></i></a>
 			</div>
 		</div>
+		<?php if($params->get('itemPreText')): ?>
+			<?php echo $params->get('itemPreText'); ?>
+		<?php endif; ?>
 	</div>
 </div>
 
