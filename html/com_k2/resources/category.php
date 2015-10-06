@@ -178,16 +178,7 @@ defined('_JEXEC') or die;
 		<?php if(isset($this->leading) && count($this->leading)): ?>
 		<!-- Leading items -->
 		<div id="itemListLeading" class="row resourceGrid">
-			<?php foreach($this->leading as $key=>$item): ?>
-
-			<?php
-			// Define a CSS class for the last container on each row
-			if( (($key+1)%($this->params->get('num_leading_columns'))==0) || count($this->leading)<$this->params->get('num_leading_columns') )
-				$lastContainer= ' itemContainerLast';
-			else
-				$lastContainer='';
-			?>
-			
+			<?php foreach($this->leading as $key=>$item): ?>			
 			
 				<?php
 					// Load category_item.php by default
@@ -195,9 +186,7 @@ defined('_JEXEC') or die;
 					echo $this->loadTemplate('item');
 				?>
 			
-			<?php if(($key+1)%($this->params->get('num_leading_columns'))==0): ?>
 			
-			<?php endif; ?>
 			<?php endforeach; ?>
 			
 		</div>
